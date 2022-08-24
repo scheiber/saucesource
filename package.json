@@ -1,0 +1,11 @@
+{
+  "name": "saucesource",
+  "version": "1.0.0",
+  "description": "Full-stack hot sauce catalog app.",
+  "main": "back-end/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Scheiber",
+  "license": "ISC"
+}
