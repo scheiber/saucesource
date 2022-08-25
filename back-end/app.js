@@ -1,15 +1,15 @@
 // Dependencies
 const express = require("express");
 const cors = require("cors");
+const saucesController = require("./controllers/saucesController.js");
 
 // Config
 const app = express();
 
-// Middleware to enable CORS on server
+// Middleware
 app.use(cors());
-
-// Middleware that turns JSON into usable JS
 app.use(express.json());
+app.use("/sauces", saucesController);
 
 // Routes
 app.get("/", (req, res) => {
