@@ -1,38 +1,75 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "ChunkFive";
+  src: url(./fonts/ChunkFive.otf) format("opentype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #1d1d1d;
+  color: white;
+  background-size: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e7e7e7;
+  color: black;
+}
+
+.delete:hover,
+.cancel:hover {
+  background-color: #f67f76;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.trans-details {
+  list-style: none;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.submit:hover {
+  background-color: #e7e7e7;
+  color: black;
+}
+
+h1,
+h2 {
+  font-family: ChunkFive;
+  font-weight: 400;
+}
+
+a {
+  color: rgb(255, 132, 0);
+}
+
+a:hover {
+  color: white;
 }
