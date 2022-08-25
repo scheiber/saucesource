@@ -1,9 +1,17 @@
+.header {
+  background-color: rgb(46, 46, 46);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   font-size: 25px;
   font-weight: bold;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .nav a:link {
