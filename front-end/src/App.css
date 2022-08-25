@@ -62,7 +62,8 @@ button:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: ChunkFive;
   font-weight: 400;
 }
@@ -77,6 +78,12 @@ h2 {
 
 h3 {
   font-size: 30px;
+  margin: 5px;
+}
+
+h4 {
+  font-size: 22px;
+  margin: 5px;
 }
 
 a {
