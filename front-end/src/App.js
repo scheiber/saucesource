@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 // import New from "./pages/New";
 // import Show from "./pages/Show";
 // import Edit from "./pages/Edit";
-// import Error from "./pages/Error";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
         <Route path="/transactions" element={<Index />} />
         <Route path="/transactions/new" element={<New />} />
         <Route path="/transactions/:index" element={<Show />} />
-        <Route path="/transactions/:index/edit" element={<Edit />} />
-        <Route path="*" element={<Error />} /> */}
+        <Route path="/transactions/:index/edit" element={<Edit />} /> */}
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );

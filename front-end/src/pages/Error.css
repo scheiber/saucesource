@@ -1,0 +1,36 @@
+.error-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.error-title {
+  font-size: 70px;
+}
+
+.error-text {
+  font-size: 30px;
+  font-family: ChunkFive;
+  margin-right: 25%;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.error-image {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+@media (max-width: 767px) {
+  .error-title {
+    font-size: 50px;
+  }
+  .extinguisher {
+    height: 300px;
+  }
+  .error-text {
+    font-size: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
