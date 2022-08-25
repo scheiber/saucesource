@@ -11,7 +11,9 @@ const Error = () => (
     <h1 className="error-title">404: Not Found.</h1>
     <div className="error-grid">
       <div className="error-image">
-        <img alt="Error" className="extinguisher" src="/error.png" />
+        <a href="/">
+          <img alt="Error" className="extinguisher" src="./images/error.png" />
+        </a>
       </div>
       <div className="error-text">
         <p>

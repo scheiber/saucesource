@@ -1,0 +1,30 @@
+.description {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.headshot {
+  border-radius: 100%;
+  height: min(100% - 1rem, 200px);
+  width: min(100% - 1rem, 200px);
+}
+
+@media (max-width: 767px) {
+  .wordmark {
+    height: 60px;
+  }
+  .headshot {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+.bio-text {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 18px;
+}
+
+.icon {
+  padding: 10px;
+}
