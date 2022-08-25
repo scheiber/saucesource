@@ -9,7 +9,7 @@ const Home = () => (
       </Helmet>
     </HelmetProvider>
     <a href="/sauces">
-      <img alt="SauceSource wordmark" src="wordmark.png" />
+      <img alt="SauceSource wordmark" src="./images/wordmark_large.png" />
     </a>
     <h1>Add some fuel to your fire.</h1>
     <h1>Set your appetite ablaze.</h1>
