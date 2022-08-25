@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(146, 68, 0);
+  bottom: 0;
+  left: 0;
+}
+
+.footer-text {
+    font-family: ChunkFive;
+    font-weight: 400;
+    font-size: 30px;
+}

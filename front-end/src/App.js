@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 // import Index from "./pages/Index";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/sauces/:index/edit" element={<Edit />} /> */}
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
