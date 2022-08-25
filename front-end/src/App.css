@@ -13,7 +13,7 @@ body {
   background-color: #1d1d1d;
   color: white;
   background-size: auto;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 button {
@@ -89,9 +89,6 @@ h4 {
 
 a {
   color: rgb(255, 120, 0);
-}
-
-a {
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
