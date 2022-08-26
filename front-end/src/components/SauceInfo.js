@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "./SauceInfo.css";
 
+const formatter = new Intl.NumberFormat("en-US");
 const { scovilleFlames } = require("../helpers/scovilleFlames.js");
 
 const API = process.env.REACT_APP_API_URL;
@@ -46,11 +47,13 @@ const SauceInfo = () => {
           <h1 className="sauce-info-name">{sauce.name}</h1>
           <div className="flames">{scovilleFlames(sauce.scoville)}</div>
           <div>
-            <h4>{sauce.scoville} Scoville heat units (SHU)</h4>
+            <h4 className="sauce-info-scoville">
+              {formatter.format(sauce.scoville)} Scoville heat units (SHU)
+            </h4>
           </div>
-          <div>
-            {sauce.is_organic ? <h4>Organic</h4> : <h4>Not Organic</h4>}
-            {sauce.is_kosher ? <h4>Kosher</h4> : <h4>Not Kosher</h4>}
+          <div className="sauce-info-org-kos">
+            {sauce.is_organic ? <> 🌿 Organic</> : <> ❌ Not Organic</>} &#8226;
+            {sauce.is_kosher ? <> ✡️ Kosher</> : <> ❌ Not Kosher</>}
           </div>
           <div className="sauce-info-description">{sauce.description}</div>
 
