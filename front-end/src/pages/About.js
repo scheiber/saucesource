@@ -65,7 +65,7 @@ const About = () => (
       />
     </a>
     <p>
-      <a href="https://github.com/scheiber/saucesource">
+      <a href="https://github.com/Scheiber/saucesource">
         Technical information and "sauce" code
       </a>{" "}
       available on GitHub.
