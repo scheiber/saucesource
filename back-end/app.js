@@ -14,9 +14,15 @@ app.use("/sauces", saucesController);
 // Routes
 app.get("/", (req, res) => {
   res.send(
-    `<h1 style="text-align:center; font-size:100px; margin: 0px;">🔥</h1>
-    <h1 style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif; margin: 0px;">Welcome to the <a href="https://saucesource.netlify.app">Sauce Source</a> Backend!</h1>
-    <p style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif;"><a href="https://github.com/Scheiber/saucesource">Find out more.</a><p/>`
+    `<style>
+    body {color: white; background:black;}
+    a {color: orange;}
+    h1 {text-align:center; font-family: 'Helvetica', 'Arial', sans-serif; margin: 0px;}
+    .flame {font-size: 100px;}
+    </style>
+    <h1 class="flame">🔥</h1>
+    <h1>Welcome to the <a href="https://saucesource.netlify.app">SauceSource</a> Backend!</h1>
+    <p style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif;"><a href="https://github.com/Scheiber/saucesource">Find out more.</a></p>`
   );
 });
 
