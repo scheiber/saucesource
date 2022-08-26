@@ -17,7 +17,7 @@ body {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: rgb(255, 120, 0);
   border: none;
   color: white;
   font-weight: bold;
@@ -37,11 +37,6 @@ button:hover {
 .cancel:hover {
   background-color: #f67f76;
   color: white;
-}
-
-.trans-details {
-  list-style: none;
-  width: auto;
 }
 
 .submit {
