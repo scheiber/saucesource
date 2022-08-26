@@ -12,7 +12,7 @@ const Error = () => (
     <div className="error-grid">
       <div className="error-image">
         <a href="/">
-          <img alt="Error" className="extinguisher" src="./images/error.png" />
+          <img alt="Error" className="extinguisher" src="/images/error.png" />
         </a>
       </div>
       <div className="error-text">
