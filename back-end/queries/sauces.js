@@ -8,6 +8,15 @@ const getAllSauces = async () => {
   }
 };
 
+const getSingleSauce = async (id) => {
+  try {
+    return await db.one("SELECT * FROM sauces WHERE id=$1", id);
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = {
   getAllSauces,
+  getSingleSauce,
 };

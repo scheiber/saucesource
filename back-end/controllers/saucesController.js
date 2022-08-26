@@ -1,8 +1,8 @@
 const express = require("express");
 const sauces = express.Router();
-const { getAllSauces } = require("../queries/sauces.js");
+const { getAllSauces, getSingleSauce } = require("../queries/sauces.js");
 
-// GET ALL SAUCES
+// Get all sauces
 sauces.get("/", async (req, res) => {
   const allSauces = await getAllSauces();
   if (allSauces[0]) {
@@ -15,5 +15,22 @@ sauces.get("/", async (req, res) => {
   }
 });
 
-// EXPORT
+// Get single sauce
+sauces.get("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const sauce = await getSingleSauce(id);
+  console.log(sauces);
+
+  if (sauce.id) {
+    res.status(200).json({
+      success: true,
+      payload: sauce,
+    });
+  } else {
+    res.status(404).json({ success: false, payload: "not found" });
+  }
+});
+
+// Export
 module.exports = sauces;
