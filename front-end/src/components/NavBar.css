@@ -22,6 +22,10 @@
   padding-left: 10px;
 }
 
+.nav-logo:hover {
+  filter: drop-shadow(0px 0px 15px rgb(255, 120, 0));
+}
+
 .nav a:hover {
   color: white;
 }
@@ -41,8 +45,4 @@
     height: 40px;
     margin-left: 15px;
   }
-}
-
-.selected {
-  border-bottom: 5px solid red;
 }

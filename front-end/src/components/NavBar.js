@@ -7,8 +7,7 @@ const NavBar = () => (
       <div>
         <img
           className="nav-logo"
-          alt="Home"
-          title="Get lost in the sauce."
+          alt="SauceSource logo"
           src={require("../images/navlogo.png")}
         />
       </div>
