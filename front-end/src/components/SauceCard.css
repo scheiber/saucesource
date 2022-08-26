@@ -1,0 +1,20 @@
+.sauce-name {
+  font-family: ChunkFive;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scoville-card {
+  font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .sauce-name {
+    font-size: 20px;
+  }
+}

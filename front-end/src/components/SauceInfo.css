@@ -1,0 +1,48 @@
+.sauce-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  grid-column-gap: 30px;
+}
+
+.sauce-info-name {
+  margin: 0px;
+}
+
+.sauce-info-description {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.sauce-info-image {
+  width: 500px;
+  height: 500px;
+}
+
+.flames {
+  font-size: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .sauce-info-image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sauce-info-image {
+    width: 300px;
+    height: 300px;
+  }
+  .sauce-info-grid {
+    display: block;
+  }
+  .sauce-info-name {
+    font-size: 35px;
+  }
+}
