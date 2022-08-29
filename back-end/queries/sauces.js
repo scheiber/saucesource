@@ -19,7 +19,7 @@ const getSingleSauce = async (id) => {
 const createSauce = async (sauce) => {
   try {
     return await db.one(
-      "INSERT INTO sauce (name, description, scoville, is_organic, is_kosher, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+      "INSERT INTO sauces (name, description, scoville, is_organic, is_kosher, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
       [
         sauce.name,
         sauce.description,
