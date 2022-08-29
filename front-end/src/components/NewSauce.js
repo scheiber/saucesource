@@ -47,7 +47,7 @@ const NewSauce = () => {
 
   return (
     <div>
-      <h1>Add Sauce</h1>
+      <h1>Add a Sauce</h1>
 
       <form onSubmit={submitForm}>
         <label htmlFor="name">Name:</label>

@@ -9,6 +9,8 @@
   src: url(./fonts/ChunkFive.otf) format("opentype");
 }
 
+/* Button colors */
+
 body {
   background-color: #1d1d1d;
   color: white;
@@ -33,9 +35,9 @@ button:hover {
   color: black;
 }
 
-.delete:hover,
-.cancel:hover {
-  background-color: #f67f76;
+.delete-button:hover,
+.cancel-button-hover {
+  background-color: #ff2718;
   color: white;
 }
 
@@ -55,6 +57,8 @@ button:hover {
   background-color: #e7e7e7;
   color: black;
 }
+
+/* Header colors */
 
 h1,
 h2,
@@ -81,6 +85,8 @@ h4 {
   font-size: 22px;
   margin: 5px;
 }
+
+/* Link colors */
 
 a {
   color: rgb(255, 120, 0);

@@ -65,7 +65,7 @@ const SauceInfo = () => {
               <button>Edit</button>
             </Link>
 
-            <button onClick={deleteSauce}>Delete</button>
+            <button className="delete-button" onClick={deleteSauce}>Delete</button>
           </div>
         </aside>
       </article>

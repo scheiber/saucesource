@@ -10,9 +10,9 @@ const New = () => {
           <title>SauceSource | New Sauce</title>
         </Helmet>
       </HelmetProvider>
-      <New />
+      <NewSauce />
     </div>
   );
 };
 
-export default NewSauce;
+export default New;

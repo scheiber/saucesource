@@ -7,7 +7,7 @@ import SauceCard from "./SauceCard";
 const API = process.env.REACT_APP_API_URL;
 
 const Sauces = () => {
-  const [sauces, setSauces] = useState([]);
+const [sauces, setSauces] = useState([]);
 
   useEffect(() => {
     axios
