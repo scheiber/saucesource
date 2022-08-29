@@ -58,8 +58,7 @@ const NewSauce = () => {
           onChange={newForm}
           required
         />
-
-        <br></br>
+        <br />
 
         <label htmlFor="description">Description:</label>
         <input
@@ -69,7 +68,7 @@ const NewSauce = () => {
           onChange={newForm}
           required
         />
-        <br></br>
+        <br />
 
         <label htmlFor="scoville">Scoville Rating:</label>
         <input
@@ -79,7 +78,7 @@ const NewSauce = () => {
           onChange={newForm}
           required
         />
-        <br></br>
+        <br />
 
         <label htmlFor="is_organic">Is this hot sauce organic?</label>
         <input
@@ -88,7 +87,7 @@ const NewSauce = () => {
           onClick={orgCheckBox}
           id="is_organic"
         />
-        <br></br>
+        <br />
 
         <label htmlFor="is_kosher">Is this hot sauce kosher?</label>
         <input
@@ -97,7 +96,7 @@ const NewSauce = () => {
           onClick={kosCheckBox}
           id="is_kosher"
         />
-        <br></br>
+        <br />
 
         <label htmlFor="image">Image:</label>
         <input
@@ -108,7 +107,7 @@ const NewSauce = () => {
           onChange={newForm}
           required
         />
-        <br></br>
+        <br />
 
         <Link to="/sauces">
           <button type="submit">Submit</button>

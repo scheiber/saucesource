@@ -19,7 +19,9 @@ function SauceCard({ sauce }) {
               <Link to={`/sauces/${sauce.id}`}>
                 <li className="sauce-name">{sauce.name}</li>
               </Link>
-              <li className="scoville-card">{scovilleFlames(sauce.scoville)}</li>
+              <li className="scoville-card">
+                {scovilleFlames(sauce.scoville)}
+              </li>
               <li>{formatter.format(sauce.scoville)}</li>
             </div>
           </article>
