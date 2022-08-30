@@ -45,6 +45,11 @@ button:hover,
   color: white;
 }
 
+.buy-button:hover {
+  background-color: #007a18;
+  color: white;
+}
+
 /* Header colors */
 
 h1,

@@ -14,6 +14,7 @@ const NewSauce = () => {
     scoville: "",
     is_organic: false,
     is_kosher: false,
+    link: "",
     image: "",
   });
 
@@ -96,12 +97,22 @@ const NewSauce = () => {
         <label htmlFor="is_kosher">This hot sauce is kosher</label>
         <br />
 
+        <label htmlFor="link">Link:</label>
+        <input
+          id="link"
+          type="url"
+          pattern="https?://.+"
+          value={sauce.link}
+          onChange={newForm}
+          required
+        />
+        <br />
+
         <label htmlFor="image">Image:</label>
         <input
           id="image"
           type="url"
           pattern="https?://.+"
-          alt="sauce"
           value={sauce.image}
           onChange={newForm}
           required

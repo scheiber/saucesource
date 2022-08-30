@@ -52,6 +52,7 @@ sauces.post("/", async (req, res) => {
         scoville: createdSauce.scoville,
         is_organic: createdSauce.is_organic,
         is_kosher: createdSauce.is_kosher,
+        link: createdSauce.link,
         image: createdSauce.image,
       },
     });
@@ -87,6 +88,7 @@ sauces.put("/:id", async (req, res) => {
         scoville: updatedSauce.scoville,
         is_organic: updatedSauce.is_organic,
         is_kosher: updatedSauce.is_kosher,
+        link: updatedSauce.link,
         image: updatedSauce.image,
       },
     });

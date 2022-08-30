@@ -19,13 +19,14 @@ const getSingleSauce = async (id) => {
 const createSauce = async (sauce) => {
   try {
     return await db.one(
-      "INSERT INTO sauces (name, description, scoville, is_organic, is_kosher, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+      "INSERT INTO sauces (name, description, scoville, is_organic, is_kosher, link, image) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
       [
         sauce.name,
         sauce.description,
         sauce.scoville,
         sauce.is_organic,
         sauce.is_kosher,
+        sauce.link,
         sauce.image,
       ]
     );
@@ -37,13 +38,14 @@ const createSauce = async (sauce) => {
 const updateSauce = async (id, sauce) => {
   try {
     return await db.one(
-      "UPDATE sauces SET name=$1, description=$2, scoville=$3, is_organic=$4, is_kosher=$5, image=$6 WHERE id=$7 RETURNING *",
+      "UPDATE sauces SET name=$1, description=$2, scoville=$3, is_organic=$4, is_kosher=$5, link=$6, image=$7 WHERE id=$8 RETURNING *",
       [
         sauce.name,
         sauce.description,
         sauce.scoville,
         sauce.is_organic,
         sauce.is_kosher,
+        sauce.link,
         sauce.image,
         id,
       ]

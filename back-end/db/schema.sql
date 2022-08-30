@@ -10,5 +10,6 @@ CREATE TABLE sauces(
     scoville    INT DEFAULT 0,
     is_organic  BOOLEAN,
     is_kosher   BOOLEAN,
+    link        TEXT,
     image       TEXT
 );

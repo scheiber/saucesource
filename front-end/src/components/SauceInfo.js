@@ -64,8 +64,13 @@ const SauceInfo = () => {
             <Link to={`/sauces/${id}/edit`}>
               <button>Edit</button>
             </Link>
+            <a target="_blank" rel="noopener noreferrer" href={sauce.link}>
+              <button className="buy-button">Buy</button>
+            </a>
 
-            <button className="delete-button" onClick={deleteSauce}>Delete</button>
+            <button className="delete-button" onClick={deleteSauce}>
+              Delete
+            </button>
           </div>
         </aside>
       </article>

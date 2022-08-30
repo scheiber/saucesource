@@ -15,6 +15,7 @@ const EditSauce = () => {
     scoville: "",
     is_organic: false,
     is_kosher: false,
+    link: "",
     image: "",
   });
 
@@ -104,6 +105,17 @@ const EditSauce = () => {
           id="is_kosher"
         />
         <label htmlFor="is_kosher">This hot sauce is kosher</label>
+        <br />
+
+        <label htmlFor="link">Link:</label>
+        <input
+          id="link"
+          type="url"
+          pattern="https?://.+"
+          value={sauce.link}
+          onChange={newForm}
+          required
+        />
         <br />
 
         <label htmlFor="image">Image:</label>
