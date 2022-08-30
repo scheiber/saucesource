@@ -11,7 +11,7 @@ const NewSauce = () => {
     id: "",
     name: "",
     description: "",
-    scoville: 0,
+    scoville: "",
     is_organic: false,
     is_kosher: false,
     image: "",
@@ -21,7 +21,8 @@ const NewSauce = () => {
     setSauce({ ...sauce, [event.target.id]: event.target.value });
   };
 
-  const handleForm = (sauce) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     axios
       .post(`${API}/sauces`, sauce)
       .then(() => {
@@ -30,11 +31,6 @@ const NewSauce = () => {
       .catch((error) => {
         console.warn(error);
       });
-  };
-
-  const submitForm = (event) => {
-    event.preventDefault();
-    handleForm(sauce);
   };
 
   const orgCheckBox = () => {
@@ -49,7 +45,7 @@ const NewSauce = () => {
     <div>
       <h1>Add a Sauce</h1>
 
-      <form onSubmit={submitForm}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -61,7 +57,9 @@ const NewSauce = () => {
         <br />
 
         <label htmlFor="description">Description:</label>
-        <input
+        <textarea
+          rows="5"
+          cols="20"
           id="description"
           type="text"
           value={sauce.description}
@@ -80,28 +78,29 @@ const NewSauce = () => {
         />
         <br />
 
-        <label htmlFor="is_organic">Is this hot sauce organic?</label>
         <input
           type="checkbox"
           name="is_organic"
           onClick={orgCheckBox}
           id="is_organic"
         />
+        <label htmlFor="is_organic">This hot sauce is organic</label>
         <br />
 
-        <label htmlFor="is_kosher">Is this hot sauce kosher?</label>
         <input
           type="checkbox"
           name="is_kosher"
           onClick={kosCheckBox}
           id="is_kosher"
         />
+        <label htmlFor="is_kosher">This hot sauce is kosher</label>
         <br />
 
         <label htmlFor="image">Image:</label>
         <input
           id="image"
-          type="text"
+          type="url"
+          pattern="https?://.+"
           alt="sauce"
           value={sauce.image}
           onChange={newForm}
@@ -109,8 +108,9 @@ const NewSauce = () => {
         />
         <br />
 
-        <Link to="/sauces">
-          <button type="submit">Submit</button>
+        <input className="submit-button" type="submit" value="Submit" />
+        <Link to={`/sauces`}>
+          <button className="cancel-button">Cancel</button>
         </Link>
       </form>
     </div>
