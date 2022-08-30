@@ -21,8 +21,15 @@ const About = () => (
       <p>
         You can use this site to see a selection of a variety of sauces,
         complete with images of their bottles, as well as information about
-        their rating on Scoville Scale, what foods they go best with, and if the
-        sauce is organic or kosher.
+        their rating on{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.chilipeppermadness.com/frequently-asked-questions/the-scoville-scale/"
+        >
+          the Scoville Scale
+        </a>
+        , what foods they go best with, and if the sauce is organic or kosher.
       </p>
       <p>Feel the burn and add some fuel to your fire.</p>
     </div>
@@ -39,7 +46,7 @@ const About = () => (
       <img
         className="headshot"
         src="./images/jonathan.png"
-        alt="Jonathan Scheiber"
+        alt="Headshot of Jonathan Scheiber"
       ></img>
     </article>
     <p className="bio-text">
@@ -48,7 +55,19 @@ const About = () => (
       <br /> His interests include user experience (UX) design, cybersecurity,
       and accessibility.
     </p>
-    <a href="https://github.com/Scheiber">
+    <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">
+      <img
+        className="icon"
+        alt="Website"
+        title="Website"
+        src="./icons/website.png"
+      />
+    </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/Scheiber"
+    >
       <img
         className="icon"
         alt="GitHub"
@@ -56,7 +75,11 @@ const About = () => (
         src="./icons/github.png"
       />
     </a>
-    <a href="https://www.linkedin.com/in/jonscheiber/">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.linkedin.com/in/jonscheiber/"
+    >
       <img
         className="icon"
         alt="LinkedIn"
@@ -65,7 +88,11 @@ const About = () => (
       />
     </a>
     <p>
-      <a href="https://github.com/Scheiber/saucesource">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/Scheiber/saucesource"
+      >
         Technical information and "sauce" code
       </a>{" "}
       available on GitHub.
