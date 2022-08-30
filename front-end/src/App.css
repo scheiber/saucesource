@@ -18,7 +18,7 @@ body {
   padding-top: 50px;
 }
 
-button, .submit {
+button, .submit-button {
   background-color: rgb(255, 120, 0);
   border: none;
   color: white;
@@ -28,15 +28,17 @@ button, .submit {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
 }
 
-button:hover, .submit:hover {
+button:hover, .submit-button:hover {
   background-color: #e7e7e7;
   color: black;
 }
 
 .delete-button:hover,
-.cancel-button-hover {
+.cancel-button:hover {
   background-color: #ff2718;
   color: white;
 }
