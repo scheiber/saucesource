@@ -42,22 +42,6 @@ sauces.get("/:id", async (req, res) => {
 sauces.post("/", async (req, res) => {
   const { body } = req;
   const createdSauce = await createSauce(body);
-
-  if (createdSauce.id && !createdSauce.image) {
-    res.status(200).json({
-      success: true,
-      payload: {
-        id: createdSauce.id,
-        name: createdSauce.name,
-        description: createdSauce.description,
-        scoville: createdSauce.scoville,
-        is_organic: createdSauce.is_organic,
-        is_kosher: createdSauce.is_kosher,
-        image: "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
-      },
-    });
-    return;
-  }
   if (createdSauce.id) {
     res.status(200).json({
       success: true,
