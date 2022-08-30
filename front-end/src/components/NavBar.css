@@ -41,10 +41,15 @@
     font-size: 16px;
   }
   .nav-link {
-    padding-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
   }
   .nav-logo {
-    height: 40px;
-    margin-left: 15px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .about {
+    margin-top: 8px;
   }
 }

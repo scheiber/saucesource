@@ -23,6 +23,7 @@
 @media (max-width: 767px) {
   .sauce-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin: 2em .5em;
   }
   .sauce-grid img {
     width: 175px;

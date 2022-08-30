@@ -19,7 +19,7 @@ const NavBar = () => (
       <div className="nav-link">Add a Sauce</div>
     </Link>
     <Link to="/about">
-      <div className="nav-link">About</div>
+      <div className="nav-link about">About</div>
     </Link>
   </nav>
 );
