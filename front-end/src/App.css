@@ -18,7 +18,8 @@ body {
   padding-top: 50px;
 }
 
-button, .submit-button {
+button,
+.submit-button {
   background-color: rgb(255, 120, 0);
   border: none;
   color: white;
@@ -32,7 +33,8 @@ button, .submit-button {
   cursor: pointer;
 }
 
-button:hover, .submit-button:hover {
+button:hover,
+.submit-button:hover {
   background-color: #e7e7e7;
   color: black;
 }
@@ -82,6 +84,11 @@ a {
   transition: 0.5s;
 }
 
-a:hover {
+.sauce-grid a:visited {
+  color: rgb(250, 39, 39);
+}
+
+a:hover,
+.sauce-grid a:hover {
   color: white;
 }
