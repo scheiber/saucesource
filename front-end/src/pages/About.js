@@ -8,8 +8,8 @@ const About = () => (
         <title>SauceSource | About</title>
       </Helmet>
     </HelmetProvider>
-    <h2>Set your appetite ablaze.</h2>
-    <div className="description">
+    <h2 className="about-kicker">Set your appetite ablaze.</h2>
+    <div className="about-text">
       <p>
         This is SauceSource, your new best friend for finding the perfect hot
         sauce.
@@ -87,7 +87,7 @@ const About = () => (
         src="./icons/linkedin.png"
       />
     </a>
-    <p>
+    <p className="about-text">
       <a
         target="_blank"
         rel="noopener noreferrer"

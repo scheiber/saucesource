@@ -1,4 +1,6 @@
-.description {
+.about-kicker,
+.about-text,
+.bio-text {
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -17,12 +19,12 @@
     height: 150px;
     width: 150px;
   }
-}
-
-.bio-text {
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: 18px;
+  .about-kicker,
+  .about-text,
+  .bio-text {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 .icon {
