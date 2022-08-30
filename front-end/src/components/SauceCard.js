@@ -22,7 +22,7 @@ function SauceCard({ sauce }) {
               <li className="scoville-card">
                 {scovilleFlames(sauce.scoville)}
               </li>
-              <li>{formatter.format(sauce.scoville)}</li>
+              <li className="scoville-numerical">{formatter.format(sauce.scoville)} SHU</li>
             </div>
           </article>
         </main>

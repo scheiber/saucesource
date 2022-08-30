@@ -1,5 +1,8 @@
-.sauce-name {
+.sauce-name, .scoville-numerical {
   font-family: ChunkFive;
+}
+
+.sauce-name {
   font-weight: 400;
   font-size: 25px;
 }
@@ -11,6 +14,10 @@ ul {
 
 .scoville-card {
   font-size: 30px;
+}
+
+.scoville-numerical {
+  font-size: 22px;
 }
 
 @media (max-width: 767px) {
