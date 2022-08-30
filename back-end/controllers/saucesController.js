@@ -4,6 +4,7 @@ const {
   getAllSauces,
   getSingleSauce,
   createSauce,
+  updateSauce,
   deleteSauce,
 } = require("../queries/sauces.js");
 
@@ -83,6 +84,33 @@ sauces.delete("/:id", async (req, res) => {
     res.status(200).json({ success: true, payload: deletedSauce });
   } else {
     res.status(404).json({ success: false, payload: { id: undefined } });
+  }
+});
+
+// Update sauce
+sauces.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const { body } = req;
+  const updatedSauce = await updateSauce(id, body);
+
+  if (updatedSauce.id) {
+    res.status(200).json({
+      success: true,
+      payload: {
+        id: updatedSauce.id,
+        name: updatedSauce.name,
+        description: updatedSauce.description,
+        scoville: updatedSauce.scoville,
+        is_organic: updatedSauce.is_organic,
+        is_kosher: updatedSauce.is_kosher,
+        image: updatedSauce.image,
+      },
+    });
+  } else if (!updatedSauce.id) {
+    res.status(422).json({
+      success: false,
+      payload: "/include all fields/",
+    });
   }
 });
 

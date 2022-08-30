@@ -34,6 +34,25 @@ const createSauce = async (sauce) => {
   }
 };
 
+const updateSauce = async (id, sauce) => {
+  try {
+    return await db.one(
+      "UPDATE sauces SET name=$1, description=$2, scoville=$3, is_organic=$4, is_kosher=$5, image=$6 WHERE id=$7 RETURNING *",
+      [
+        sauce.name,
+        sauce.description,
+        sauce.scoville,
+        sauce.is_organic,
+        sauce.is_kosher,
+        sauce.image,
+        id,
+      ]
+    );
+  } catch (error) {
+    return error;
+  }
+};
+
 const deleteSauce = async (id) => {
   try {
     return await db.one("DELETE FROM sauces WHERE id=$1 RETURNING *", id);
@@ -46,5 +65,6 @@ module.exports = {
   getAllSauces,
   getSingleSauce,
   createSauce,
+  updateSauce,
   deleteSauce,
 };
