@@ -26,14 +26,19 @@ const SauceInfo = () => {
   }, [id, navigate]);
 
   const deleteSauce = () => {
-    axios
-      .delete(`${API}/sauces/${id}`)
-      .then(() => {
-        navigate("/sauces");
-      })
-      .catch((error) => {
-        console.warn(error);
-      });
+    const answer = window.confirm(
+      `Are you sure you want to delete this sauce? It will be gone forever, and you'll have to add it again if you want it back.`
+    );
+    if (answer) {
+      axios
+        .delete(`${API}/sauces/${id}`)
+        .then(() => {
+          navigate("/sauces");
+        })
+        .catch((error) => {
+          console.warn(error);
+        });
+    }
   };
 
   return (
