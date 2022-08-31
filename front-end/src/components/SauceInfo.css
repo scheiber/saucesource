@@ -19,7 +19,6 @@
 }
 
 .sauce-info-image {
-  width: 300px;
   height: 500px;
 }
 
@@ -38,14 +37,12 @@
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .sauce-info-image {
-    width: 210px;
     height: 350px;
   }
 }
 
 @media (max-width: 767px) {
   .sauce-info-image {
-    width: 180px;
     height: 300px;
   }
   .sauce-info-grid {
@@ -56,5 +53,11 @@
   }
   .flames {
     font-size: 45px;
+  }
+  .sauce-info-description {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 }
