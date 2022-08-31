@@ -8,14 +8,17 @@ const Home = () => (
         <title>SauceSource | Home</title>
       </Helmet>
     </HelmetProvider>
-    <h1 className="splash-text">
-      Add some fuel to your fire.
+    <h1 className="splash-header">
+      Add some <span className="fire">fuel</span> to your{" "}
+      <span className="fire">fire</span>.
       <br />
-      Explore the spicy world of hot sauces.
     </h1>
+    <h2 className="splash-stinger">
+      Explore the spicy world of hot sauces with SauceSource.
+    </h2>
     <a href="/sauces">
       <img
-        className="splash"
+        className="splash-image"
         alt="Shelf of hot sauces"
         src="./images/shelf.jpg"
       />

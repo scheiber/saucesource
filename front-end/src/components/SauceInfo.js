@@ -57,7 +57,8 @@ const SauceInfo = () => {
             </h4>
           </div>
           <div className="sauce-info-org-kos">
-            {sauce.is_organic ? <> 🌿 Organic</> : <> ❌ Not Organic</>} &#8213;
+            {sauce.is_organic ? <> 🌿 Organic</> : <> ❌ Not Organic</>}{" "}
+            &nbsp;&nbsp;
             {sauce.is_kosher ? <> ✡️ Kosher</> : <> ❌ Not Kosher</>}
           </div>
           <div className="sauce-info-description">{sauce.description}</div>

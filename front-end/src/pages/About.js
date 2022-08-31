@@ -8,7 +8,9 @@ const About = () => (
         <title>SauceSource | About</title>
       </Helmet>
     </HelmetProvider>
-    <h2 className="about-header">Set your appetite ablaze.</h2>
+    <h1 className="about-header">
+      Set your appetite <span className="fire">ablaze</span>.
+    </h1>
     <div className="about-text">
       <p>
         This is SauceSource, your new best friend for finding the perfect hot
