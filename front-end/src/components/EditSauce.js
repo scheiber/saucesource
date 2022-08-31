@@ -130,7 +130,7 @@ const EditSauce = () => {
         />
         <br />
 
-        <input className="submit-button" type="submit" value="Submit" />
+        <input className="submit-button" type="submit" value="Save" />
         <Link to={`/sauces`}>
           <button className="cancel-button">Cancel</button>
         </Link>
