@@ -32,4 +32,4 @@ _Section in progress_
 
 ## Acknowledgments
 
-Much gratitude goes towards the testers and previewers of this project, particuarly [Jossy Pascasio](https://github.com/named-josie) for design consulting, and [Pratima Roy](https://github.com/PratimaRoy) for user experience review.
+Much gratitude goes towards the testers and reviewers of this project, particularly [Jossy Pascasio](https://github.com/named-josie) for design consulting, and [Pratima Roy](https://github.com/PratimaRoy) for user experience review.
