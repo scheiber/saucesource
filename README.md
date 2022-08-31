@@ -8,8 +8,16 @@ Need to spice up your life? SauceSource is a React-based web app that allows a u
 
 ## Notable Features
 
-- Designed to be fully responsive. Works great on both desktop and mobile.
+- Clean and easily navigable user experience is designed to be fully responsive. Looks and works great on both desktop and mobile platforms.
+- Add, edit, see information about, and delete sauces.
 - Asks to confirm deletion of any sauce, just to check that you're really sure.
+- Formats and displays Scoville ratings correctly using [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat).
+- Uses [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) to dynamically change page titles based on current route.
+- Links to buy sauces from external websites from each sauce page.
+- Customized [favicon](https://saucesource.netlify.app/favicon.ico).
+- Customized font.
+- Customized [error page](https://saucesource.netlify.app/error).
+- "[About](https://allocate.netlify.app/about)" page with details of project and credits.
 
 ## Links
 
@@ -24,11 +32,39 @@ Need to spice up your life? SauceSource is a React-based web app that allows a u
 
 ### Front-end Setup
 
-_Section in progress_
+```bash
+# clone the repository to your local machine.
+git clone git@github.com:Scheiber/saucesource.git
+
+# navigate to the front-end directory
+cd saucesource/front-end
+
+# install the required node modules
+npm i
+
+# start the server
+npm start
+```
 
 ### Back-end Setup
 
-_Section in progress_
+```bash
+# clone the repository to your local machine.
+git clone git@github.com:Scheiber/saucesource.git
+
+# navigate to the back-end directory
+cd saucesource/back-end
+
+# install the required node modules
+npm i
+
+# initialize and seed the database
+npm run db:init
+npm run db:seed
+
+# start the server
+nodemon server.js
+```
 
 ## Acknowledgments
 
