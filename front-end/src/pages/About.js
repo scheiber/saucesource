@@ -8,7 +8,7 @@ const About = () => (
         <title>SauceSource | About</title>
       </Helmet>
     </HelmetProvider>
-    <h2 className="about-kicker">Set your appetite ablaze.</h2>
+    <h2 className="about-header">Set your appetite ablaze.</h2>
     <div className="about-text">
       <p>
         This is SauceSource, your new best friend for finding the perfect hot
@@ -32,6 +32,21 @@ const About = () => (
         , what foods they go best with, and if the sauce is organic or kosher.
       </p>
       <p>Feel the burn and add some fuel to your fire.</p>
+      <h3 className="about-header">What is a Scoville Heat Unit (SHU)?</h3>
+      <p>
+        {" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.chilipeppermadness.com/frequently-asked-questions/the-scoville-scale/"
+        >
+          The Scoville Scale
+        </a>{" "}
+        measures the pungency (spiciness or "heat") of chili peppers, and is
+        recorded in a unit of measurement known as Scoville Heat Units (SHU).
+        The higher the number of SHUs a sauce has, the more intense and "hot"
+        the sauce will be.
+      </p>
     </div>
     <article>
       <img
