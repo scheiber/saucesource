@@ -6,7 +6,7 @@
 }
 
 .sauce-grid img {
-  width: 300px;
+  width: 180px;
   height: 300px;
 }
 
@@ -26,7 +26,7 @@
     margin: 2em .5em;
   }
   .sauce-grid img {
-    width: 175px;
+    width: 105px;
     height: 175px;
   }
 }
