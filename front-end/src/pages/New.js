@@ -7,7 +7,7 @@ const New = () => {
     <div>
       <HelmetProvider>
         <Helmet>
-          <title>SauceSource | New Sauce</title>
+          <title>SauceSource | Add a Sauce</title>
         </Helmet>
       </HelmetProvider>
       <NewSauce />

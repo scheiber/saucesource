@@ -53,7 +53,14 @@ const SauceInfo = () => {
           <div className="flames">{scovilleFlames(sauce.scoville)}</div>
           <div>
             <h4 className="sauce-info-scoville">
-              {formatter.format(sauce.scoville)} Scoville heat units (SHU)
+              {formatter.format(sauce.scoville)} Scoville heat units (SHU){" "}
+              <a
+                title="What is a Scoville heat unit?"
+                className="scoville-info-icon"
+                href="/about"
+              >
+                ℹ️
+              </a>
             </h4>
           </div>
           <div className="sauce-info-org-kos">
