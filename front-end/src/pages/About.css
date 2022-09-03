@@ -25,6 +25,9 @@
     margin-left: 5%;
     margin-right: 5%;
   }
+  .about-header {
+    font-size: 28px;
+  }
 }
 
 .icon {

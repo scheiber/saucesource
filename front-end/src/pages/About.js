@@ -56,7 +56,7 @@ const About = () => (
         src="./images/wordmark.png"
         alt="SauceSource Wordmark"
       />
-      <h3>Created by Jonathan Scheiber</h3>
+      <h3 className="about-header">Created by Jonathan Scheiber</h3>
       <h4>"The Boss of the Sauce"</h4>
     </article>
     <article>
