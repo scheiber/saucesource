@@ -60,11 +60,9 @@ const About = () => (
       <h4>"The Boss of the Sauce"</h4>
     </article>
     <article>
-      <img
-        className="headshot"
-        src="./images/jonathan.png"
-        alt="Headshot of Jonathan Scheiber"
-      ></img>
+      <img className="headshot"
+      src="./images/jonathan.png"
+      alt="Headshot of Jonathan Scheiber" />
     </article>
     <p className="bio-text">
       Jonathan is a full-stack web developer with a background in IT and

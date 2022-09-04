@@ -2,8 +2,12 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import "./EditSauce.css";
+import { AiFillSave } from "react-icons/ai";
+import { GiCancel } from "react-icons/gi";
 
 const API = process.env.REACT_APP_API_URL;
+
+const buttonIcon = { verticalAlign: "top" };
 
 const EditSauce = () => {
   const navigate = useNavigate();
@@ -130,9 +134,13 @@ const EditSauce = () => {
         />
         <br />
 
-        <input className="submit-button" type="submit" value="Save" />
-        <Link to={`/sauces`}>
-          <button className="cancel-button">Cancel</button>
+        <button className="submit-button" type="submit" value="Save">
+          <AiFillSave style={buttonIcon} /> Save
+        </button>
+        <Link to={`/sauces/${index}`}>
+          <button className="cancel-button">
+            <GiCancel style={buttonIcon} /> Cancel
+          </button>
         </Link>
       </form>
     </div>
