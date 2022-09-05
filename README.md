@@ -83,3 +83,12 @@ nodemon server.js
 ## Acknowledgments
 
 Much gratitude goes towards the testers and reviewers of this project, particularly [Jossy Pascasio](https://github.com/named-josie) for design consulting, and [Pratima Roy](https://github.com/PratimaRoy) for user experience review.
+
+## Screenshots
+
+![Home Page](https://user-images.githubusercontent.com/794551/188517766-9c14b580-56c1-47d0-a838-46770aebd7ac.png)
+![All Sauces (Index) Page](https://user-images.githubusercontent.com/794551/188517779-fd6018d6-2910-441c-9386-2c8d4f845056.png)
+![Add Sauce (Create) Page](https://user-images.githubusercontent.com/794551/188517793-b2610de0-4002-46b6-931d-df9ac0199839.png)
+![Sauce Info (Read) Page](https://user-images.githubusercontent.com/794551/188517845-f630ecb0-6d62-45f5-8818-dd999994545f.png)
+![Edit Sauce (Update) Page](https://user-images.githubusercontent.com/794551/188517858-151979a4-86b4-4d7e-9b7d-12e17fb3a9ad.png)
+![About Page](https://user-images.githubusercontent.com/794551/188517866-a7e72ea9-11d9-4a7b-998c-6f12e7be3a62.png)
