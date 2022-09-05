@@ -2,7 +2,7 @@ const db = require("../db/dbConfig.js");
 
 const getAllSauces = async () => {
   try {
-    return await db.any("SELECT * FROM sauces");
+    return await db.any("SELECT * FROM sauces ORDER BY id");
   } catch (error) {
     return error;
   }
