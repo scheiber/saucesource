@@ -19,6 +19,7 @@ const LoadingIndicator = (props) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          paddingTop: "200px",
         }}
       >
         <RotatingLines
