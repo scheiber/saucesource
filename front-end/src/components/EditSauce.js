@@ -149,14 +149,14 @@ const EditSauce = () => {
         />
         <br />
 
-        <button className="submit-button" type="submit" value="Save">
-          <AiFillSave style={buttonIcon} /> Save
-        </button>
         <Link to={`/sauces/${index}`}>
           <button className="cancel-button">
             <GiCancel style={buttonIcon} /> Cancel
           </button>
         </Link>
+        <button className="submit-button" type="submit" value="Save">
+          <AiFillSave style={buttonIcon} /> Save
+        </button>
       </form>
     </div>
   );

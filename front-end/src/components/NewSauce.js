@@ -137,15 +137,14 @@ const NewSauce = () => {
           required
         />
         <br />
-
-        <button className="submit-button" type="submit" value="Save">
-          <AiOutlineSend style={buttonIcon} /> Submit
-        </button>
         <Link to={`/sauces`}>
           <button className="cancel-button">
             <GiCancel style={buttonIcon} /> Cancel
           </button>
         </Link>
+        <button className="submit-button" type="submit" value="Save">
+          <AiOutlineSend style={buttonIcon} /> Submit
+        </button>
       </form>
     </div>
   );
