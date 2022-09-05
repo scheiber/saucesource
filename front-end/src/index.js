@@ -38,8 +38,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <App />
       <LoadingIndicator />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
