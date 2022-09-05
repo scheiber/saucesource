@@ -2,12 +2,19 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./NewSauce.css";
-import { AiOutlineSend } from "react-icons/ai";
+import { AiOutlineSend, AiOutlineLink } from "react-icons/ai";
 import { GiCancel } from "react-icons/gi";
+import { FaLeaf } from "react-icons/fa";
+import { TbJewishStar } from "react-icons/tb";
+import { BsImage } from "react-icons/bs";
 
 const API = process.env.REACT_APP_API_URL;
 
-const buttonIcon = { verticalAlign: "top" };
+const buttonIcon = { verticalAlign: "top" },
+  organicIcon = { color: "#00ff00", verticalAlign: "middle" },
+  kosherIcon = { color: "#87ceeb", verticalAlign: "middle" },
+  linkIcon = { color: "#BCBCBC", verticalAlign: "middle" },
+  imageIcon = { color: "#e69138", verticalAlign: "middle" };
 
 const NewSauce = () => {
   const navigate = useNavigate();
@@ -73,7 +80,7 @@ const NewSauce = () => {
         />
         <br />
 
-        <label htmlFor="scoville">Scoville Rating:</label>
+        <label htmlFor="scoville">🔥 Scoville Rating:</label>
         <input
           id="scoville"
           type="number"
@@ -89,7 +96,9 @@ const NewSauce = () => {
           onClick={orgCheckBox}
           id="is_organic"
         />
-        <label htmlFor="is_organic">This hot sauce is organic</label>
+        <label htmlFor="is_organic">
+          This hot sauce is <FaLeaf style={organicIcon} /> organic
+        </label>
         <br />
 
         <input
@@ -98,10 +107,14 @@ const NewSauce = () => {
           onClick={kosCheckBox}
           id="is_kosher"
         />
-        <label htmlFor="is_kosher">This hot sauce is kosher</label>
+        <label htmlFor="is_kosher">
+          This hot sauce is <TbJewishStar style={kosherIcon} /> kosher
+        </label>
         <br />
 
-        <label htmlFor="link">Link:</label>
+        <label htmlFor="link">
+          <AiOutlineLink style={linkIcon} /> Link:
+        </label>
         <input
           id="link"
           type="url"
@@ -112,7 +125,9 @@ const NewSauce = () => {
         />
         <br />
 
-        <label htmlFor="image">Image:</label>
+        <label htmlFor="image">
+          <BsImage style={imageIcon} /> Image:
+        </label>
         <input
           id="image"
           type="url"
