@@ -36,12 +36,17 @@ Need to spice up your life? SauceSource is a React-based web app that allows a u
 
 ### Front-end Setup
 
+Prerequisites are Git and Node.js.
+
 ```bash
 # clone the repository to your local machine.
 git clone git@github.com:Scheiber/saucesource.git
 
 # navigate to the front-end directory
 cd saucesource/front-end
+
+# create a .env file to allow the front-end to access the back-end locally
+echo "REACT_APP_API_URL=http://localhost:3333" >> .env
 
 # install the required node modules
 npm i
@@ -52,12 +57,17 @@ npm start
 
 ### Back-end Setup
 
+Prerequisites are Git, Node.js, and Postgres.
+
 ```bash
 # clone the repository to your local machine.
 git clone git@github.com:Scheiber/saucesource.git
 
 # navigate to the back-end directory
 cd saucesource/back-end
+
+# create a .env file to access the database locally
+echo "PORT=3333\nPG_HOST=localhost\nPG_PORT=5432\nPG_DATABASE=saucesource" >> .env
 
 # install the required node modules
 npm i
