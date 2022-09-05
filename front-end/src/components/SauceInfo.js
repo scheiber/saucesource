@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "./SauceInfo.css";
+import { trackPromise } from "react-promise-tracker";
 
 import { FaEdit, FaShoppingCart, FaLeaf } from "react-icons/fa";
 import {
@@ -30,6 +31,7 @@ const SauceInfo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    trackPromise(
     axios
       .get(`${API}/sauces/${id}`)
       .then((res) => {
@@ -37,7 +39,7 @@ const SauceInfo = () => {
       })
       .catch((error) => {
         console.warn(error);
-      });
+      }));
   }, [id, navigate]);
 
   const deleteSauce = () => {
