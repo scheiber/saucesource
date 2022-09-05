@@ -107,7 +107,7 @@ const EditSauce = () => {
           id="is_organic"
         />
         <label htmlFor="is_organic">
-          This hot sauce is <FaLeaf style={organicIcon} /> organic
+          Toggle <FaLeaf style={organicIcon} /> organic
         </label>
         <br />
 
@@ -118,7 +118,7 @@ const EditSauce = () => {
           id="is_kosher"
         />
         <label htmlFor="is_kosher">
-          This hot sauce is <TbJewishStar style={kosherIcon} /> kosher
+          Toggle <TbJewishStar style={kosherIcon} /> kosher
         </label>
         <br />
 
