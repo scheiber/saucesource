@@ -49,6 +49,27 @@ const About = () => (
         The higher the number of SHUs a sauce has, the more intense and "hot"
         the sauce will be.
       </p>
+      <h3 className="about-header">What is organic?</h3>
+      <p>
+        Certified organic foods are grown and processed according to federal
+        guidelines addressing, among many factors, soil quality, pest and weed
+        control, and use of additives. Organic producers rely on natural
+        substances and physical, mechanical, or biologically based farming
+        methods to the fullest extent possible.{" "}
+        <a href="https://www.usda.gov/media/blog/2012/03/22/organic-101-what-usda-organic-label-means">
+          Learn more about organic farming.
+        </a>
+      </p>
+      <h3 className="about-header">What is kosher?</h3>
+      <p>
+        The word "kosher" means fit or proper as it relates to Jewish dietary
+        law. Kosher foods are permitted to be eaten by those who follow a kosher
+        diet, and can be used as ingredients in the production of additional
+        food items.{" "}
+        <a href="https://oukosher.org/the-kosher-primer/">
+          Learn more about the laws of kosher.
+        </a>
+      </p>
     </div>
     <article>
       <img
@@ -60,9 +81,11 @@ const About = () => (
       <h4>"The Boss of the Sauce"</h4>
     </article>
     <article>
-      <img className="headshot"
-      src="./images/jonathan.png"
-      alt="Headshot of Jonathan Scheiber" />
+      <img
+        className="headshot"
+        src="./images/jonathan.png"
+        alt="Headshot of Jonathan Scheiber"
+      />
     </article>
     <p className="bio-text">
       Jonathan is a full-stack web developer with a background in IT and
