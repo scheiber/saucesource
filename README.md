@@ -4,7 +4,7 @@
 
 ## Add some fuel to your fire.
 
-Need to spice up your life? SauceSource is a React-based web app that allows a user to learn about and curate different types of hot sauces. Users can navigate see a selection of different sauces, complete with images of their bottles, as well as information about their rating on Scoville Scale, what foods they go best with, and if the sauce is organic or kosher.
+Looking to spice up your life? SauceSource is a web app that allows a user to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, as well as information about their rating on Scoville Scale, the origins of the sauce, what foods they go best with, and if the sauce is organic or kosher.
 
 ## Notable Features
 
@@ -12,11 +12,11 @@ Need to spice up your life? SauceSource is a React-based web app that allows a u
 - Capabilities to add, edit, see information about, and delete sauces.
 - Asks to confirm deletion of any sauce, to prevent unintentional user action and data loss.
 - "Sticky" navigation bar is always present on screen as user scrolls the page.
+- Assigns each sauce a "flame score" from 1 to 5 that is calculated based on the sauce's Scoville Heat Unit (SHU) rating.
 - Formats and displays Scoville ratings correctly using [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat).
 - Uses [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) to dynamically change page titles based on current route.
 - Uses [react-icons](https://www.npmjs.com/package/react-icons) for custom button icons.
 - Uses [react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker) and [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner) to display a loading indicator during fetch calls.
-- Assigns each sauce a "flame score" from 1 to 5 that is calculated based on the sauce's Scoville Heat Unit (SHU) rating.
 - Links to buy sauces from external websites from each sauce page.
 - Customized [favicon](https://saucesource.netlify.app/favicon.ico).
 - Customized font.
@@ -28,7 +28,7 @@ Need to spice up your life? SauceSource is a React-based web app that allows a u
 - [Frontend Deployment](https://saucesource.netlify.app/)
 - [Backend Deployment](https://saucesource-backend.herokuapp.com/)
 - [Trello Board](https://trello.com/b/75UsM2Ye/saucesource)
-- [ERD](https://miro.com/app/board/uXjVPdYXzrM=/?share_link_id=26192569397)
+- [ERD](https://miro.com/app/board/uXjVPdYXzrM=/)
 - [Wireframes](https://wireframe.cc/DEJeRW)
 - [Project Prompt](https://github.com/joinpursuit/8-3-full-stack-portfolio)
 

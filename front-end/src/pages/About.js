@@ -17,7 +17,7 @@ const About = () => (
         sauce.
       </p>
       <p>
-        Need to spice up your life? SauceSource is a web app that lets you learn
+        Looking to spice up your life? SauceSource is a web app that lets you learn
         about and curate different types of hot sauces.
       </p>
       <p>
