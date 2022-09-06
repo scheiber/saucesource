@@ -71,6 +71,7 @@ echo "PORT=3333\nPG_HOST=localhost\nPG_PORT=5432\nPG_DATABASE=saucesource" >> .e
 
 # install the required node modules
 npm i
+npm i -g nodemon
 
 # initialize and seed the database
 npm run db:init

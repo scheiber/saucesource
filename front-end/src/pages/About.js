@@ -8,14 +8,10 @@ const About = () => (
         <title>SauceSource | About</title>
       </Helmet>
     </HelmetProvider>
-    <h1 className="about-header">
+    <h1 className="about-kicker">
       Set your appetite <span className="fire">ablaze</span>.
     </h1>
     <div className="about-text">
-      <p>
-        This is SauceSource, your new best friend for finding the perfect hot
-        sauce.
-      </p>
       <p>
         Looking to spice up your life? SauceSource is a web app that lets you learn
         about and curate different types of hot sauces.
