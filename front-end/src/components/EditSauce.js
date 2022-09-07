@@ -40,8 +40,11 @@ const EditSauce = () => {
       .then((res) => {
         setSauce(res.data.payload);
       })
-      .catch();
-  }, [index]);
+      .catch((error) => {
+        console.warn(error);
+        navigate("/error");
+      });
+  }, [index, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

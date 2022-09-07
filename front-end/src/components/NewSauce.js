@@ -42,6 +42,7 @@ const NewSauce = () => {
       })
       .catch((error) => {
         console.warn(error);
+        navigate("/error");
       });
   };
 

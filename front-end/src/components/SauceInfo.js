@@ -32,14 +32,16 @@ const SauceInfo = () => {
 
   useEffect(() => {
     trackPromise(
-    axios
-      .get(`${API}/sauces/${id}`)
-      .then((res) => {
-        setSauce(res.data.payload);
-      })
-      .catch((error) => {
-        console.warn(error);
-      }));
+      axios
+        .get(`${API}/sauces/${id}`)
+        .then((res) => {
+          setSauce(res.data.payload);
+        })
+        .catch((error) => {
+          console.warn(error);
+          navigate("/error");
+        })
+    );
   }, [id, navigate]);
 
   const deleteSauce = () => {
@@ -54,6 +56,7 @@ const SauceInfo = () => {
         })
         .catch((error) => {
           console.warn(error);
+          navigate("/error");
         });
     }
   };

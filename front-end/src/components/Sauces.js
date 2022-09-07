@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Sauces.css";
 import SauceCard from "./SauceCard";
 import { trackPromise } from "react-promise-tracker";
@@ -10,6 +11,7 @@ const API = process.env.REACT_APP_API_URL;
 
 const Sauces = () => {
   const [sauces, setSauces] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     trackPromise(
@@ -20,9 +22,10 @@ const Sauces = () => {
         })
         .catch((error) => {
           console.warn("error");
+          navigate("/error");
         })
     );
-  }, []);
+  }, [navigate]);
 
   return (
     <div>
