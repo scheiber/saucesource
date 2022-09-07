@@ -17,6 +17,7 @@ Looking to spice up your life? SauceSource is a web app that allows a user to le
 - Uses [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) to dynamically change page titles based on current route.
 - Uses [react-icons](https://www.npmjs.com/package/react-icons) for custom button icons.
 - Uses [react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker) and [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner) to display a loading indicator during fetch calls.
+- Uses [react-scroll-up-button](https://www.npmjs.com/package/react-scroll-up-button) to display a button that scrolls to the top of the list of sauces when clicked.
 - Links to buy sauces from external websites from each sauce page.
 - Customized [favicon](https://saucesource.netlify.app/favicon.ico).
 - Customized font.
@@ -49,7 +50,7 @@ cd saucesource/front-end
 echo "REACT_APP_API_URL=http://localhost:3333" >> .env
 
 # install the required node modules
-npm i
+npm i -f
 
 # start the server
 npm start

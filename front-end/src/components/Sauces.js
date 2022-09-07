@@ -4,11 +4,12 @@ import React from "react";
 import "./Sauces.css";
 import SauceCard from "./SauceCard";
 import { trackPromise } from "react-promise-tracker";
+import ScrollUpButton from "react-scroll-up-button";
 
 const API = process.env.REACT_APP_API_URL;
 
 const Sauces = () => {
-const [sauces, setSauces] = useState([]);
+  const [sauces, setSauces] = useState([]);
 
   useEffect(() => {
     trackPromise(
@@ -33,6 +34,7 @@ const [sauces, setSauces] = useState([]);
             })
           : null}
       </section>
+      <ScrollUpButton style={{ backgroundColor: "rgb(255, 120, 0)" }} />
     </div>
   );
 };
