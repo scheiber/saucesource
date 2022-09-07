@@ -34,7 +34,7 @@ const Sauces = () => {
             })
           : null}
       </section>
-      <ScrollUpButton style={{ backgroundColor: "rgb(255, 120, 0)" }} />
+      <ScrollUpButton style={{ backgroundColor: "rgb(255, 120, 0, 0.75)" }} />
     </div>
   );
 };
