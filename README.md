@@ -50,7 +50,7 @@ cd saucesource/front-end
 echo "REACT_APP_API_URL=http://localhost:3333" >> .env
 
 # install the required node modules
-npm i -f
+npm i
 
 # start the server
 npm start
