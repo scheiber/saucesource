@@ -18,7 +18,7 @@
 }
 
 .sauce-info-image {
-  width: 300px;
+  height: 500px;
 }
 
 .flames {
@@ -36,13 +36,13 @@
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .sauce-info-image {
-    width: 250px;
+    height: 400px;
   }
 }
 
 @media (max-width: 767px) {
   .sauce-info-image {
-    width: 200px;
+    height: 300px;
   }
   .sauce-info-grid {
     display: block;
