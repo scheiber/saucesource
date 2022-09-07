@@ -8,8 +8,9 @@ Looking to spice up your life? SauceSource is a web app that allows a user to le
 
 ## Notable Features
 
-- Clean and easily-navigable user experience is designed to be fully responsive. Looks and works great on both desktop and mobile platforms.
-- Capabilities to add, edit, see information about, and delete sauces.
+- Clean and easily-navigable user experience is designed to be fully responsive.
+- Looks and works great on both desktop and mobile platforms.
+- Ability to add, edit, see information about, and delete sauces.
 - Asks to confirm deletion of any sauce, to prevent unintentional user action and data loss.
 - "Sticky" navigation bar is always present on screen as user scrolls the page.
 - Assigns each sauce a "flame score" from 1 to 5 that is calculated based on the sauce's Scoville Heat Unit (SHU) rating.
@@ -18,9 +19,9 @@ Looking to spice up your life? SauceSource is a web app that allows a user to le
 - Uses [react-icons](https://www.npmjs.com/package/react-icons) for custom button icons.
 - Uses [react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker) and [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner) to display a loading indicator during fetch calls.
 - Uses [react-scroll-up-button](https://www.npmjs.com/package/react-scroll-up-button) to display a button that scrolls to the top of the list of sauces when clicked.
-- Links to buy sauces from external websites from each sauce page.
+- Links to buy sauces from external websites on each sauce page.
 - Customized [favicon](https://saucesource.netlify.app/favicon.ico).
-- Customized font.
+- Customized [font](https://www.fontsquirrel.com/fonts/chunkfive).
 - Customized [error page](https://saucesource.netlify.app/error).
 - "[About](https://saucesource.netlify.app/about)" page with details of project and credits.
 
