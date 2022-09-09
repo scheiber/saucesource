@@ -96,6 +96,7 @@ const NewSauce = () => {
         <input
           type="checkbox"
           name="is_organic"
+          className="checkmark"
           onClick={orgCheckBox}
           id="is_organic"
         />
@@ -106,6 +107,7 @@ const NewSauce = () => {
 
         <input
           type="checkbox"
+          className="checkmark"
           name="is_kosher"
           onClick={kosCheckBox}
           id="is_kosher"

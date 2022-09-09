@@ -150,6 +150,12 @@ textarea {
   box-sizing: border-box;
 }
 
+.checkmark {
+  height: 20px;
+  width: 20px;
+  accent-color: rgb(224, 120, 29);
+}
+
 @media (max-width: 767px) {
   input[type="url"] {
     width: 250px;
