@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import "./EditSauce.css";
 import { AiFillSave, AiOutlineLink } from "react-icons/ai";
 import { GiCancel } from "react-icons/gi";
 import { FaLeaf } from "react-icons/fa";
@@ -83,8 +82,8 @@ const EditSauce = () => {
 
         <label htmlFor="description">Description:</label>
         <textarea
-          rows="5"
-          cols="20"
+          rows="7"
+          cols="25"
           id="description"
           type="text"
           value={sauce.description}
@@ -131,6 +130,7 @@ const EditSauce = () => {
         <input
           id="link"
           type="url"
+          size="40"
           pattern="https?://.+"
           value={sauce.link}
           onChange={newForm}
@@ -144,6 +144,7 @@ const EditSauce = () => {
         <input
           id="image"
           type="url"
+          size="40"
           pattern="https?://.+"
           alt="sauce"
           value={sauce.image}

@@ -110,3 +110,30 @@ a:hover,
   text-shadow: 0px -2px 4px rgb(230, 146, 0), 0px -2px 10px #ff3,
     0px -10px 20px #f90, 0px -20px 40px #c33;
 }
+
+/* Text Inputs */
+
+label {
+  padding: 10px;
+}
+
+input,
+textarea {
+  color: #ffffff;
+  background-color: #444444;
+  font-size: 16px;
+}
+
+input[type='number']{
+    width: 80px;
+} 
+
+textarea {
+  vertical-align: top;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

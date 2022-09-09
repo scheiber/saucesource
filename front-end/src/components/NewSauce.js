@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./NewSauce.css";
 import { AiOutlineSend, AiOutlineLink } from "react-icons/ai";
 import { GiCancel } from "react-icons/gi";
 import { FaLeaf } from "react-icons/fa";
@@ -71,8 +70,8 @@ const NewSauce = () => {
 
         <label htmlFor="description">Description:</label>
         <textarea
-          rows="5"
-          cols="20"
+          rows="7"
+          cols="25"
           id="description"
           type="text"
           value={sauce.description}
@@ -119,6 +118,7 @@ const NewSauce = () => {
         <input
           id="link"
           type="url"
+          size="40"
           pattern="https?://.+"
           value={sauce.link}
           onChange={newForm}
@@ -132,6 +132,7 @@ const NewSauce = () => {
         <input
           id="image"
           type="url"
+          size="40"
           pattern="https?://.+"
           value={sauce.image}
           onChange={newForm}

@@ -12,6 +12,11 @@
   width: 200px;
 }
 
+.about-text,
+.bio-text {
+  line-height: 1.4;
+}
+
 @media (max-width: 767px) {
   .wordmark {
     height: 60px;
