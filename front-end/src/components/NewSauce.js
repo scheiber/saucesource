@@ -59,9 +59,11 @@ const NewSauce = () => {
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
+        <br />
         <input
           id="name"
           type="text"
+          size="25"
           value={sauce.name}
           onChange={newForm}
           required
@@ -69,6 +71,7 @@ const NewSauce = () => {
         <br />
 
         <label htmlFor="description">Description:</label>
+        <br />
         <textarea
           rows="7"
           cols="25"

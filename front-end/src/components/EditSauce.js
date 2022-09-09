@@ -71,16 +71,18 @@ const EditSauce = () => {
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
+        <br />
         <input
           id="name"
           type="text"
+          size="25"
           value={sauce.name}
           onChange={newForm}
           required
         />
         <br />
-
         <label htmlFor="description">Description:</label>
+        <br />
         <textarea
           rows="7"
           cols="25"
@@ -91,7 +93,6 @@ const EditSauce = () => {
           required
         />
         <br />
-
         <label htmlFor="scoville">🔥 Scoville Rating:</label>
         <input
           id="scoville"
@@ -101,7 +102,6 @@ const EditSauce = () => {
           required
         />
         <br />
-
         <input
           type="checkbox"
           name="is_organic"
@@ -112,7 +112,6 @@ const EditSauce = () => {
           Toggle <FaLeaf style={organicIcon} /> organic
         </label>
         <br />
-
         <input
           type="checkbox"
           name="is_kosher"
@@ -123,7 +122,6 @@ const EditSauce = () => {
           Toggle <TbJewishStar style={kosherIcon} /> kosher
         </label>
         <br />
-
         <label htmlFor="link">
           <AiOutlineLink style={linkIcon} /> Link:
         </label>
@@ -137,7 +135,6 @@ const EditSauce = () => {
           required
         />
         <br />
-
         <label htmlFor="image">
           <BsImage style={imageIcon} /> Image:
         </label>
@@ -152,7 +149,6 @@ const EditSauce = () => {
           required
         />
         <br />
-
         <Link to={`/sauces/${index}`}>
           <button className="cancel-button">
             <GiCancel style={buttonIcon} /> Cancel
