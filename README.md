@@ -36,26 +36,39 @@ Looking to spice up your life? SauceSource is a web app that allows a user to le
 
 ## Local Setup
 
+First, clone this repository to your local machine. This step is necessary for running both the front-end and back-end.
+
 ```bash
-# clone this repository to your local machine.
 git clone git@github.com:Scheiber/saucesource.git
 ```
-It is recommended to use two separate terminal instanaces so that the front-end and back-end can run concurrently. 
+
+It is recommended to use two separate terminal instanaces so that the front-end and back-end can run concurrently.
+
 ### Front-end Setup
 
 Prerequisites are Git and Node.js.
 
+First, navigate to the front-end directory.
+
 ```bash
-# navigate to the front-end directory
 cd saucesource/front-end
+```
 
-# create a .env file to allow the front-end to access the back-end locally
+Next, create a .env file to allow the front-end to access the back-end locally.
+
+```bash
 echo "REACT_APP_API_URL=http://localhost:3333" >> .env
+```
 
-# install the required node modules
+Next, install the required node modules.
+
+```bash
 npm i
+```
 
-# start the server
+Finally, start the server.
+
+```bash
 npm start
 ```
 
@@ -63,22 +76,33 @@ npm start
 
 Prerequisites are Git, Node.js, and Postgres.
 
+First, navigate to the back-end directory.
+
 ```bash
-# navigate to the back-end directory
 cd saucesource/back-end
+```
 
-# create a .env file to access the database locally
+Next, create a .env file to access the database locally.
+
+```bash
 echo "PORT=3333\nPG_HOST=localhost\nPG_PORT=5432\nPG_DATABASE=saucesource" >> .env
+```
 
-# install the required node modules
-npm i
-npm i -g nodemon
+Next, install the required node modules.
 
-# initialize and seed the database
-npm run db:init
-npm run db:seed
+```bash
+npm i && npm i -g nodemon
+```
 
-# start the server
+Next, initialize and seed the database.
+
+```bash
+npm run db:init && npm run db:seed
+```
+
+Finally, start the server
+
+```bash
 nodemon server.js
 ```
 
@@ -94,3 +118,7 @@ Much gratitude goes towards the testers and reviewers of this project, particula
 ![Sauce Info (Read) Page](https://user-images.githubusercontent.com/794551/188517845-f630ecb0-6d62-45f5-8818-dd999994545f.png)
 ![Edit Sauce (Update) Page](https://user-images.githubusercontent.com/794551/188517858-151979a4-86b4-4d7e-9b7d-12e17fb3a9ad.png)
 ![About Page](https://user-images.githubusercontent.com/794551/188517866-a7e72ea9-11d9-4a7b-998c-6f12e7be3a62.png)
+
+```
+
+```
