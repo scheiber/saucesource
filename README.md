@@ -36,14 +36,16 @@ Looking to spice up your life? SauceSource is a web app that allows a user to le
 
 ## Local Setup
 
+```bash
+# clone this repository to your local machine.
+git clone git@github.com:Scheiber/saucesource.git
+```
+It is recommended to use two separate terminal instanaces so that the front-end and back-end can run concurrently. 
 ### Front-end Setup
 
 Prerequisites are Git and Node.js.
 
 ```bash
-# clone the repository to your local machine.
-git clone git@github.com:Scheiber/saucesource.git
-
 # navigate to the front-end directory
 cd saucesource/front-end
 
@@ -62,9 +64,6 @@ npm start
 Prerequisites are Git, Node.js, and Postgres.
 
 ```bash
-# clone the repository to your local machine.
-git clone git@github.com:Scheiber/saucesource.git
-
 # navigate to the back-end directory
 cd saucesource/back-end
 
