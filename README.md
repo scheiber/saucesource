@@ -4,7 +4,7 @@
 
 ## Add some fuel to your fire.
 
-Looking to spice up your life? SauceSource is a web app that allows a user to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, as well as information about their rating on Scoville Scale, the origins of the sauce, what foods they go best with, and if the sauce is organic or kosher.
+Looking to spice up your life? SauceSource is a web app that allows you to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, their rating on the Scoville Scale, the origins of the sauce, what foods they pair best with, and if the sauce is organic or kosher.
 
 ## Notable Features
 
