@@ -42,7 +42,7 @@ First, clone this repository to your local machine.
 git clone git@github.com:Scheiber/saucesource.git
 ```
 
-It is recommended to use two separate terminal instanaces so that the front-end and back-end can run concurrently.
+It is recommended to use two separate terminal instances so that the front-end and back-end can run concurrently.
 
 ### Front-end Setup
 
