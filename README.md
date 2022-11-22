@@ -28,7 +28,7 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 ## Links
 
 - [Frontend Deployment](https://saucesource.netlify.app/)
-- [Backend Deployment](https://saucesource-backend.herokuapp.com/)
+- [Backend Deployment](https://saucesource.fly.dev/)
 - [Trello Board](https://trello.com/b/75UsM2Ye/saucesource)
 - [ERD](https://miro.com/app/board/uXjVPdYXzrM=/)
 - [Wireframes](https://wireframe.cc/DEJeRW)
