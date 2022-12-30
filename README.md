@@ -1,12 +1,24 @@
-# SauceSource
+# SauceSource <!-- omit from toc -->
 
 <img width="700" alt="Sauce Source" src="https://user-images.githubusercontent.com/794551/186691778-5b3bb14b-3091-4465-934f-df2ff3cb38fb.png">
 
-## Add some fuel to your fire.
+## Table of Contents <!-- omit from toc -->
 
-Looking to spice up your life? SauceSource is a web app that allows you to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, their rating on the Scoville Scale, the origins of the sauce, what foods they pair best with, and if the sauce is organic or kosher.
+- [About](#about)
+- [Features](#features)
+- [Technical Details](#technical-details)
+- [Links](#links)
+- [Local Setup](#local-setup)
+  - [Front-end Setup](#front-end-setup)
+  - [Back-end Setup](#back-end-setup)
+- [Acknowledgments](#acknowledgments)
+- [Screenshots](#screenshots)
 
-## Notable Features
+## About
+
+Looking to spice up your life? SauceSource is a web app that allows you to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, their rating on the Scoville Scale, the origins of the sauce, what foods they pair best with, and if the sauce is organic or kosher. Add some fuel to your fire with SauceSource.
+
+## Features
 
 - Clean and easily-navigable user experience is designed to be fully responsive.
 - Looks and works great on both desktop and mobile platforms.
@@ -24,6 +36,13 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 - Customized [font](https://www.fontsquirrel.com/fonts/chunkfive).
 - Customized [error page](https://saucesource.netlify.app/error).
 - "[About](https://saucesource.netlify.app/about)" page with details of project and credits.
+
+## Technical Details
+
+- This project was created using a React-based front-end, an Express-based back-end, and a PostgreSQL database.
+- The front-end is hosted on [Netlify](https://www.netlify.com/) and the back-end is hosted on [Fly.io](https://fly.io/).
+- Sauce data is stored in [the back-end database](https://saucesource.fly.dev/sauces).
+- This project went from conception to completion in two weeks and was created while fully remote through the [Pursuit](https://www.pursuit.org/) fellowship.
 
 ## Links
 
@@ -108,7 +127,7 @@ nodemon server.js
 
 ## Acknowledgments
 
-Much gratitude goes towards the testers and reviewers of this project, particularly [Jossy Pascasio](https://github.com/named-josie) for design consulting, and [Pratima Roy](https://github.com/PratimaRoy) for user experience review.
+Much gratitude goes towards the testers and reviewers of this project, including my instructors Myra Smith, Gary Kertis, and Tristan Angieri, as well as my colleagues [Jossy Pascasio](https://github.com/named-josie) for design consulting, and [Pratima Roy](https://github.com/PratimaRoy) for user experience review.
 
 ## Screenshots
 
