@@ -32,10 +32,10 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 - Uses [react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker) and [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner) to display a loading indicator during fetch calls.
 - Uses [react-scroll-up-button](https://www.npmjs.com/package/react-scroll-up-button) to display a button that scrolls to the top of the list of sauces when clicked.
 - Links to buy sauces from external websites on each sauce page.
-- Customized [favicon](https://saucesource.netlify.app/favicon.ico).
+- Customized [favicon](https://saucesource.scheiber.dev/favicon.ico).
 - Customized [font](https://www.fontsquirrel.com/fonts/chunkfive).
-- Customized [error page](https://saucesource.netlify.app/error).
-- "[About](https://saucesource.netlify.app/about)" page with details of project and credits.
+- Customized [error page](https://saucesource.scheiber.dev/error).
+- "[About](https://saucesource.scheiber.dev/about)" page with details of project and credits.
 
 ## Technical Details
 
@@ -46,7 +46,7 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 
 ## Links
 
-- [Frontend Deployment](https://saucesource.netlify.app/)
+- [Frontend Deployment](https://saucesource.scheiber.dev/)
 - [Backend Deployment](https://saucesource.fly.dev/)
 - [Trello Board](https://trello.com/b/75UsM2Ye/saucesource)
 - [ERD](https://miro.com/app/board/uXjVPdYXzrM=/)
