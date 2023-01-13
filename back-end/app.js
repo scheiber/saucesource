@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
     .flame {font-size: 100px;}
     </style>
     <h1 class="flame">🔥</h1>
-    <h1>Welcome to the <a href="https://saucesource.netlify.app">SauceSource</a> Backend!</h1>
+    <h1>Welcome to the <a href="https://saucesource.scheiber.dev/">SauceSource</a> Backend!</h1>
     <p style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif;"><a href="https://github.com/Scheiber/saucesource">Find out more.</a></p>`
   );
 });
