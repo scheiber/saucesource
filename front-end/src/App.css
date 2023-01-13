@@ -1,3 +1,26 @@
+::selection {
+  background: #ff7800;
+  color: #000;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.75em;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7800;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #914400;
+}
+
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +43,7 @@ body {
 
 button,
 .submit-button {
-  background-color: rgb(255, 120, 0);
+  background-color: #ff7800;
   border: none;
   color: white;
   font-weight: bold;
