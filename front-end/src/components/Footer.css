@@ -1,13 +1,14 @@
 .footer {
   margin-top: 20px;
   padding: 1rem;
-  background-color: rgb(146, 68, 0);
+  background-color: #924400;
   bottom: 0;
   left: 0;
 }
 
 .footer-text {
   font-family: ChunkFive;
+  color: #fff;
   font-weight: 400;
   font-size: 30px;
   margin: 10px;

@@ -1,3 +1,60 @@
+.sauce-grid a:visited {
+  color: rgb(250, 39, 39);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1d1d1d;
+    color: white;
+  }
+  .header {
+    background-color: #2e2e2e;
+  }
+  a:hover,
+  .sauce-grid a:hover {
+    color: white;
+  }
+  input,
+  textarea {
+    color: #ffffff;
+    background-color: #444444;
+    font-size: 16px;
+  }
+  .icon:hover {
+    filter: drop-shadow(0px 0px 15px rgb(255, 120, 0));
+    transition: filter 1s;
+  }
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f2c185;
+    color: #5a3a2e;
+  }
+  .header {
+    background-color: #924400;
+  }
+  a:hover,
+  .sauce-grid a:hover {
+    color: #5a3a2e;
+  }
+  input,
+  textarea {
+    color: #5a3a2e;
+    background-color: #f0aa54;
+    font-size: 16px;
+  }
+  .icon {
+    filter: brightness(0);
+  }
+  .icon:hover {
+    filter: brightness(0) drop-shadow(0px 0px 15px rgb(255, 120, 0));
+    transition: filter 1s;
+  }
+}
+
 ::selection {
   background: #ff7800;
   color: #000;
@@ -35,8 +92,6 @@
 /* Button colors */
 
 body {
-  background-color: #1d1d1d;
-  color: white;
   background-size: auto;
   padding-top: 50px;
 }
@@ -120,15 +175,6 @@ a {
   transition: 0.5s;
 }
 
-.sauce-grid a:visited {
-  color: rgb(250, 39, 39);
-}
-
-a:hover,
-.sauce-grid a:hover {
-  color: white;
-}
-
 /* Fire Text */
 
 .fire {
@@ -144,8 +190,6 @@ label {
 
 input,
 textarea {
-  color: #ffffff;
-  background-color: #444444;
   font-size: 16px;
 }
 
