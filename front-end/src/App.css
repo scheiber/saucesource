@@ -53,6 +53,9 @@
     filter: brightness(0) drop-shadow(0px 0px 15px rgb(255, 120, 0));
     transition: filter 1s;
   }
+  .wordmark {
+    content: url("../public/images/wordmark-light.png");
+  }
 }
 
 ::selection {
