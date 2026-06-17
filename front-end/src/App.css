@@ -12,7 +12,8 @@
     background-color: #2e2e2e;
   }
   a:hover,
-  .sauce-grid a:hover {
+  .sauce-grid a:hover,
+  .sauce-card:hover a {
     color: white;
   }
   input,
@@ -38,7 +39,8 @@
     background-color: #924400;
   }
   a:hover,
-  .sauce-grid a:hover {
+  .sauce-grid a:hover,
+  .sauce-card:hover a {
     color: #5a3a2e;
   }
   input,
