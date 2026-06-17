@@ -154,6 +154,16 @@ const EditSauce = () => {
           required
         />
         <br />
+        {sauce.image && (
+          <img
+            src={sauce.image}
+            alt="Preview"
+            style={{ height: "120px", marginBottom: "8px", borderRadius: "4px" }}
+            onError={(e) => { e.target.style.display = "none"; }}
+            onLoad={(e) => { e.target.style.display = ""; }}
+          />
+        )}
+        <br />
         <Link to={`/sauces/${index}`}>
           <button className="cancel-button">
             <GiCancel style={buttonIcon} /> Cancel
