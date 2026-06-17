@@ -69,6 +69,31 @@ body.light .wordmark {
   content: url("../public/images/wordmark-light.png");
 }
 
+/* Skip to main content link (visually hidden until focused) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 12px 20px;
+  background-color: #ff7800;
+  color: white;
+  font-weight: bold;
+  z-index: 200;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Keyboard focus indicator */
+:focus-visible {
+  outline: 3px solid #ff7800;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 ::selection {
   background: #ff7800;
   color: #000;

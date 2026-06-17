@@ -26,17 +26,20 @@ function App() {
 
   return (
     <div className="App">
+      <a className="skip-to-content" href="#main-content">Skip to main content</a>
       <NavBar theme={theme} toggleTheme={toggleTheme} />
       <br />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/sauces" element={<Index />} />
-        <Route path="/sauces/new" element={<New />} />
-        <Route path="/sauces/:id" element={<Show />} />
-        <Route path="/sauces/:index/edit" element={<Edit />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sauces" element={<Index />} />
+          <Route path="/sauces/new" element={<New />} />
+          <Route path="/sauces/:id" element={<Show />} />
+          <Route path="/sauces/:index/edit" element={<Edit />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
