@@ -20,6 +20,24 @@ ul {
   font-size: 22px;
 }
 
+.sauce-card-badges {
+  font-size: 20px;
+  margin-top: 4px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.sauce-card {
+  border-radius: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sauce-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 767px) {
   .sauce-name {
     font-size: 20px;

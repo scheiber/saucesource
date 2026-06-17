@@ -31,6 +31,21 @@ const Sauces = () => {
     );
   }, [navigate]);
 
+  const isFiltered =
+    searchQuery || sortBy !== "default" || filterOrganic || filterKosher;
+
+  const clearFilters = () => {
+    setSearchQuery("");
+    setSortBy("default");
+    setFilterOrganic(false);
+    setFilterKosher(false);
+  };
+
+  const surpriseMe = () => {
+    const random = sauces[Math.floor(Math.random() * sauces.length)];
+    navigate(`/sauces/${random.id}`);
+  };
+
   const displayedSauces = sauces
     .filter((sauce) =>
       sauce.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -45,9 +60,16 @@ const Sauces = () => {
       return 0;
     });
 
+  const heading =
+    sauces.length === 0
+      ? "All Sauces"
+      : isFiltered
+      ? `Showing ${displayedSauces.length} of ${sauces.length}`
+      : `All Sauces (${sauces.length})`;
+
   return (
     <div>
-      <h1>All Sauces</h1>
+      <h1>{heading}</h1>
       <div className="sauce-controls">
         <input
           type="text"
@@ -85,6 +107,16 @@ const Sauces = () => {
           />
           Kosher only
         </label>
+        {isFiltered && (
+          <button className="clear-button" onClick={clearFilters}>
+            Clear filters
+          </button>
+        )}
+        {sauces.length > 0 && (
+          <button className="surprise-button" onClick={surpriseMe}>
+            Surprise me!
+          </button>
+        )}
       </div>
       <section className="sauce-grid">
         {displayedSauces.length > 0 ? (

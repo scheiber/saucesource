@@ -5,6 +5,22 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin: 0.5rem 2em 1rem;
+  position: sticky;
+  top: 50px;
+  z-index: 10;
+  padding: 0.5rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sauce-controls {
+    background-color: #1d1d1d;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .sauce-controls {
+    background-color: #f2c185;
+  }
 }
 
 .sauce-search {
