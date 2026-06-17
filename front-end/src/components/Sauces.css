@@ -79,9 +79,14 @@ body.light .sauce-controls {
   .sauce-controls {
     gap: 0.5rem;
     padding: 0.5rem 0.5em;
+    top: 50px;
   }
   .sauce-search {
     width: 160px;
+  }
+  .surprise-button {
+    padding: 8px 10px;
+    font-size: 14px;
   }
   .sauce-grid {
     grid-template-columns: repeat(2, 1fr);
