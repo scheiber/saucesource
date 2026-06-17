@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -11,9 +12,21 @@ import Edit from "./pages/Edit";
 import Error from "./pages/Error";
 
 function App() {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("saucesource-theme") || "dark"
+  );
+
+  useEffect(() => {
+    document.body.classList.toggle("light", theme === "light");
+    localStorage.setItem("saucesource-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () =>
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar theme={theme} toggleTheme={toggleTheme} />
       <br />
       <Routes>
         <Route path="/" element={<Home />} />

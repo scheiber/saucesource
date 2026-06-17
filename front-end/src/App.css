@@ -2,64 +2,71 @@
   color: rgb(250, 39, 39);
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1d1d1d;
-    color: white;
-  }
-  .header {
-    background-color: #2e2e2e;
-  }
-  a:hover,
-  .sauce-grid a:hover,
-  .sauce-card:hover a {
-    color: white;
-  }
-  input,
-  textarea,
-  select {
-    color: #ffffff;
-    background-color: #444444;
-    font-size: 16px;
-  }
-  .icon:hover {
-    filter: drop-shadow(0px 0px 15px rgb(255, 120, 0));
-    transition: filter 1s;
-  }
+/* Default (dark) theme */
+body {
+  background-color: #1d1d1d;
+  color: white;
+  background-size: auto;
+  padding-top: 50px;
 }
 
-/* Light mode styles */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #f2c185;
-    color: #5a3a2e;
-  }
-  .header {
-    background-color: #924400;
-  }
-  a:hover,
-  .sauce-grid a:hover,
-  .sauce-card:hover a {
-    color: #5a3a2e;
-  }
-  input,
-  textarea,
-  select {
-    color: #5a3a2e;
-    background-color: #f0aa54;
-    font-size: 16px;
-  }
-  .icon {
-    filter: brightness(0);
-  }
-  .icon:hover {
-    filter: brightness(0) drop-shadow(0px 0px 15px rgb(255, 120, 0));
-    transition: filter 1s;
-  }
-  .wordmark {
-    content: url("../public/images/wordmark-light.png");
-  }
+.header {
+  background-color: #2e2e2e;
+}
+
+a:hover,
+.sauce-grid a:hover,
+.sauce-card:hover a {
+  color: white;
+}
+
+input,
+textarea,
+select {
+  color: #ffffff;
+  background-color: #444444;
+  font-size: 16px;
+}
+
+.icon:hover {
+  filter: drop-shadow(0px 0px 15px rgb(255, 120, 0));
+  transition: filter 1s;
+}
+
+/* Light theme overrides */
+body.light {
+  background-color: #f2c185;
+  color: #5a3a2e;
+}
+
+body.light .header {
+  background-color: #924400;
+}
+
+body.light a:hover,
+body.light .sauce-grid a:hover,
+body.light .sauce-card:hover a {
+  color: #5a3a2e;
+}
+
+body.light input,
+body.light textarea,
+body.light select {
+  color: #5a3a2e;
+  background-color: #f0aa54;
+}
+
+body.light .icon {
+  filter: brightness(0);
+}
+
+body.light .icon:hover {
+  filter: brightness(0) drop-shadow(0px 0px 15px rgb(255, 120, 0));
+  transition: filter 1s;
+}
+
+body.light .wordmark {
+  content: url("../public/images/wordmark-light.png");
 }
 
 ::selection {
@@ -97,11 +104,6 @@
 }
 
 /* Button colors */
-
-body {
-  background-size: auto;
-  padding-top: 50px;
-}
 
 button,
 .submit-button {

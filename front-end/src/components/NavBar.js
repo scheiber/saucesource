@@ -1,7 +1,8 @@
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { BsSun, BsMoon } from "react-icons/bs";
 
-const NavBar = () => (
+const NavBar = ({ theme, toggleTheme }) => (
   <nav className="nav header">
     <NavLink to="/">
       <div>
@@ -21,6 +22,13 @@ const NavBar = () => (
     <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link nav-active" : "nav-link"}>
       About
     </NavLink>
+    <button
+      className="theme-toggle"
+      onClick={toggleTheme}
+      title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {theme === "dark" ? <BsSun /> : <BsMoon />}
+    </button>
   </nav>
 );
 

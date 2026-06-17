@@ -11,16 +11,12 @@
   z-index: 10;
 }
 
-@media (prefers-color-scheme: dark) {
-  .sauce-controls {
-    background-color: #1d1d1d;
-  }
+.sauce-controls {
+  background-color: #1d1d1d;
 }
 
-@media (prefers-color-scheme: light) {
-  .sauce-controls {
-    background-color: #f2c185;
-  }
+body.light .sauce-controls {
+  background-color: #f2c185;
 }
 
 .sauce-search {

@@ -8,7 +8,7 @@
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto 1fr 1fr 1fr auto;
   font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
@@ -40,6 +40,26 @@
 
 .nav-active {
   border-bottom: 3px solid rgb(255, 120, 0);
+}
+
+.nav .theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 8px 12px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav .theme-toggle:hover {
+  background: none;
+  color: rgb(255, 120, 0);
 }
 
 @media (max-width: 767px) {
