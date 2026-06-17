@@ -6,6 +6,8 @@ import "./Sauces.css";
 import SauceCard from "./SauceCard";
 import { trackPromise } from "react-promise-tracker";
 import ScrollUpButton from "react-scroll-up-button";
+import { FaLeaf } from "react-icons/fa";
+import { TbJewishStar } from "react-icons/tb";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -96,7 +98,7 @@ const Sauces = () => {
             checked={filterOrganic}
             onChange={(e) => setFilterOrganic(e.target.checked)}
           />
-          Organic only
+          <FaLeaf style={{ color: "#00ff00", verticalAlign: "middle" }} /> Organic only
         </label>
         <label className="sauce-filter-label">
           <input
@@ -105,7 +107,7 @@ const Sauces = () => {
             checked={filterKosher}
             onChange={(e) => setFilterKosher(e.target.checked)}
           />
-          Kosher only
+          <TbJewishStar style={{ color: "#87ceeb", verticalAlign: "middle" }} /> Kosher only
         </label>
         {isFiltered && (
           <button className="clear-button" onClick={clearFilters}>
