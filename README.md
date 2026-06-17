@@ -16,14 +16,22 @@
 
 ## About
 
-Looking to spice up your life? SauceSource is a web app that allows you to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, their rating on the Scoville Scale, the origins of the sauce, what foods they pair best with, and if the sauce is organic or kosher. Add some fuel to your fire with SauceSource.
+Looking to spice up your life? SauceSource is a web app that allows you to learn about and curate different kinds of hot sauces. The app functions as a reference guide as well as a discovery tool. Users can navigate the site to see a selection of different sauces, complete with images of their bottles, their rating on the Scoville Scale, and whether the sauce is organic or kosher. Add some fuel to your fire with SauceSource.
 
 ## Features
 
 - Clean and easily-navigable user experience is designed to be fully responsive.
 - Looks and works great on both desktop and mobile platforms.
+- Supports dark and light mode based on system preference.
 - Ability to add, edit, see information about, and delete sauces.
 - Asks to confirm deletion of any sauce, to prevent unintentional user action and data loss.
+- Search sauces by name, sort by name or Scoville rating, and filter by organic or kosher status.
+- Displays a live sauce count that updates to reflect active filters, with a one-click clear filters button.
+- "Surprise me!" button navigates to a randomly selected sauce.
+- Organic and kosher status shown as icon badges directly on each sauce card.
+- Image URL fields in the add and edit forms show a live preview thumbnail as the URL is typed.
+- Active navigation link is visually distinguished in the navigation bar.
+- "Sticky" filter controls bar remains visible as the user scrolls the sauce list.
 - "Sticky" navigation bar is always present on screen as user scrolls the page.
 - Assigns each sauce a "flame score" from 1 to 5 that is calculated based on the sauce's Scoville Heat Unit (SHU) rating.
 - Formats and displays Scoville ratings correctly using [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat).
@@ -104,7 +112,7 @@ cd saucesource/back-end
 Next, create a .env file to access the database locally.
 
 ```bash
-echo "PORT=3333\nPG_HOST=localhost\nPG_PORT=5432\nPG_DATABASE=saucesource" >> .env
+printf "PORT=3333\nPG_HOST=localhost\nPG_PORT=5432\nPG_DATABASE=saucesource\n" >> .env
 ```
 
 Next, install the required node modules.
