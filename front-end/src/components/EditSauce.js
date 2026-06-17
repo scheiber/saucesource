@@ -106,22 +106,24 @@ const EditSauce = () => {
           type="checkbox"
           name="is_organic"
           className="checkmark"
-          onClick={orgCheckBox}
+          checked={sauce.is_organic}
+          onChange={orgCheckBox}
           id="is_organic"
         />
         <label htmlFor="is_organic">
-          Toggle <FaLeaf style={organicIcon} /> organic
+          <FaLeaf style={organicIcon} /> Organic
         </label>
         <br />
         <input
           type="checkbox"
           name="is_kosher"
           className="checkmark"
-          onClick={kosCheckBox}
+          checked={sauce.is_kosher}
+          onChange={kosCheckBox}
           id="is_kosher"
         />
         <label htmlFor="is_kosher">
-          Toggle <TbJewishStar style={kosherIcon} /> kosher
+          <TbJewishStar style={kosherIcon} /> Kosher
         </label>
         <br />
         <label htmlFor="link">
