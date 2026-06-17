@@ -16,7 +16,8 @@
     color: white;
   }
   input,
-  textarea {
+  textarea,
+  select {
     color: #ffffff;
     background-color: #444444;
     font-size: 16px;
@@ -41,7 +42,8 @@
     color: #5a3a2e;
   }
   input,
-  textarea {
+  textarea,
+  select {
     color: #5a3a2e;
     background-color: #f0aa54;
     font-size: 16px;
