@@ -97,6 +97,7 @@ const EditSauce = () => {
         <input
           id="scoville"
           type="number"
+          min="0"
           value={sauce.scoville}
           onChange={newForm}
           required

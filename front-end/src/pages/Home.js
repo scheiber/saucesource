@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
 const Home = () => (
@@ -16,13 +17,13 @@ const Home = () => (
     <h2 className="splash-stinger">
       Explore the spicy world of hot sauces with SauceSource.
     </h2>
-    <a href="/sauces">
+    <Link to="/sauces">
       <img
         className="splash-image"
         alt="Shelf of hot sauces"
         src="./images/shelf.jpg"
       />
-    </a>
+    </Link>
   </div>
 );
 

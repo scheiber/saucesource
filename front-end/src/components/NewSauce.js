@@ -87,6 +87,7 @@ const NewSauce = () => {
         <input
           id="scoville"
           type="number"
+          min="0"
           value={sauce.scoville}
           onChange={newForm}
           required
@@ -97,7 +98,8 @@ const NewSauce = () => {
           type="checkbox"
           name="is_organic"
           className="checkmark"
-          onClick={orgCheckBox}
+          checked={sauce.is_organic}
+          onChange={orgCheckBox}
           id="is_organic"
         />
         <label htmlFor="is_organic">
@@ -109,7 +111,8 @@ const NewSauce = () => {
           type="checkbox"
           className="checkmark"
           name="is_kosher"
-          onClick={kosCheckBox}
+          checked={sauce.is_kosher}
+          onChange={kosCheckBox}
           id="is_kosher"
         />
         <label htmlFor="is_kosher">
