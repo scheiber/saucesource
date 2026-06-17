@@ -1,4 +1,5 @@
 import "./Error.css";
+import { Link } from "react-router-dom";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
 const Error = () => (
@@ -11,9 +12,9 @@ const Error = () => (
     <h1 className="error-title">404: Not Found.</h1>
     <div className="error-grid">
       <div className="error-image">
-        <a href="/">
+        <Link to="/">
           <img alt="Error" className="extinguisher" src="/images/error.png" />
-        </a>
+        </Link>
       </div>
       <div className="error-text">
         <p>
@@ -21,7 +22,7 @@ const Error = () => (
           changed, or is temporarily unavailable.
         </p>
         <p>
-          <a href="/">Click here</a> to go back home.
+          <Link to="/">Click here</Link> to go back home.
         </p>
       </div>
     </div>

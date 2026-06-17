@@ -37,6 +37,10 @@
   padding-top: 15px;
 }
 
+.nav-active {
+  border-bottom: 3px solid rgb(255, 120, 0);
+}
+
 @media (max-width: 767px) {
   .nav {
     font-size: 18px;

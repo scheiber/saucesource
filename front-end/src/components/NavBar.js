@@ -1,9 +1,9 @@
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => (
   <nav className="nav header">
-    <Link to="/">
+    <NavLink to="/">
       <div>
         <img
           className="nav-logo"
@@ -11,16 +11,16 @@ const NavBar = () => (
           src={require("../images/navlogo.png")}
         />
       </div>
-    </Link>
-    <Link to="/sauces">
-      <div className="nav-link">All Sauces</div>
-    </Link>
-    <Link to="/sauces/new">
-      <div className="nav-link">Add a Sauce</div>
-    </Link>
-    <Link to="/about">
-      <div className="nav-link about">About</div>
-    </Link>
+    </NavLink>
+    <NavLink to="/sauces" className={({ isActive }) => isActive ? "nav-link nav-active" : "nav-link"}>
+      All Sauces
+    </NavLink>
+    <NavLink to="/sauces/new" className={({ isActive }) => isActive ? "nav-link nav-active" : "nav-link"}>
+      Add a Sauce
+    </NavLink>
+    <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link nav-active" : "nav-link"}>
+      About
+    </NavLink>
   </nav>
 );
 

@@ -27,7 +27,7 @@ const About = () => (
         >
           the Scoville Scale
         </a>
-        , what foods they go best with, and if the sauce is organic or kosher.
+        , and if the sauce is organic or kosher.
       </p>
       <p>Feel the burn and add some fuel to your fire.</p>
       <h3 className="about-header">What is a Scoville Heat Unit (SHU)?</h3>
@@ -52,7 +52,11 @@ const About = () => (
         control, and use of additives. Organic producers rely on natural
         substances and physical, mechanical, or biologically based farming
         methods to the fullest extent possible.{" "}
-        <a href="https://www.usda.gov/media/blog/2012/03/22/organic-101-what-usda-organic-label-means">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.usda.gov/about-usda/news/blog/organic-101-what-usda-organic-label-means"
+        >
           Learn more about organic farming.
         </a>
       </p>
