@@ -98,7 +98,7 @@ const Sauces = () => {
             checked={filterOrganic}
             onChange={(e) => setFilterOrganic(e.target.checked)}
           />
-          <FaLeaf style={{ color: "#00ff00", verticalAlign: "middle" }} /> Organic only
+          <FaLeaf style={{ color: "#00ff00", verticalAlign: "middle" }} /> Organic
         </label>
         <label className="sauce-filter-label">
           <input
@@ -107,7 +107,7 @@ const Sauces = () => {
             checked={filterKosher}
             onChange={(e) => setFilterKosher(e.target.checked)}
           />
-          <TbJewishStar style={{ color: "#87ceeb", verticalAlign: "middle" }} /> Kosher only
+          <TbJewishStar style={{ color: "#87ceeb", verticalAlign: "middle" }} /> Kosher
         </label>
         {isFiltered && (
           <button className="clear-button" onClick={clearFilters}>

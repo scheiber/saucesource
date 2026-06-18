@@ -103,7 +103,7 @@ const NewSauce = () => {
           id="is_organic"
         />
         <label htmlFor="is_organic">
-          This hot sauce is <FaLeaf style={organicIcon} /> organic
+          <FaLeaf style={organicIcon} /> Organic
         </label>
         <br />
 
@@ -116,7 +116,7 @@ const NewSauce = () => {
           id="is_kosher"
         />
         <label htmlFor="is_kosher">
-          This hot sauce is <TbJewishStar style={kosherIcon} /> kosher
+          <TbJewishStar style={kosherIcon} /> Kosher
         </label>
         <br />
 
@@ -151,9 +151,17 @@ const NewSauce = () => {
           <img
             src={sauce.image}
             alt="Preview"
-            style={{ height: "120px", marginBottom: "8px", borderRadius: "4px" }}
-            onError={(e) => { e.target.style.display = "none"; }}
-            onLoad={(e) => { e.target.style.display = ""; }}
+            style={{
+              height: "120px",
+              marginBottom: "8px",
+              borderRadius: "4px",
+            }}
+            onError={(e) => {
+              e.target.style.display = "none";
+            }}
+            onLoad={(e) => {
+              e.target.style.display = "";
+            }}
           />
         )}
         <br />

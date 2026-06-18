@@ -84,7 +84,7 @@ body.light .sauce-controls {
   .sauce-search {
     width: 160px;
   }
-  .surprise-button {
+  .surprise-button, .clear-button {
     padding: 8px 10px;
     font-size: 14px;
   }
