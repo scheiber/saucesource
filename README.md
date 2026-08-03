@@ -22,7 +22,7 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 
 - Clean and easily-navigable user experience is designed to be fully responsive.
 - Looks and works great on both desktop and mobile platforms.
-- Supports dark and light mode based on system preference.
+- Dark/light mode toggle in the navigation bar, persisted across visits.
 - Ability to add, edit, see information about, and delete sauces.
 - Asks to confirm deletion of any sauce, to prevent unintentional user action and data loss.
 - Search sauces by name, sort by name or Scoville rating, and filter by organic or kosher status.
@@ -47,7 +47,7 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 
 ## Technical Details
 
-- This project was created using a React-based front-end, an Express-based back-end, and a PostgreSQL database.
+- This project was created using a React-based front-end (bundled with Vite), an Express-based back-end, and a PostgreSQL database.
 - The front-end is hosted on [Netlify](https://www.netlify.com/) and the back-end is hosted on [Fly.io](https://fly.io/).
 - Sauce data is stored in [the back-end database](https://saucesource.fly.dev/sauces).
 - This project went from conception to completion in two weeks and was created while fully remote through the [Pursuit](https://www.pursuit.org/) fellowship.
@@ -66,7 +66,7 @@ Looking to spice up your life? SauceSource is a web app that allows you to learn
 First, clone this repository to your local machine.
 
 ```bash
-git clone git@github.com:Scheiber/saucesource.git
+git clone git@github.com:scheiber/saucesource.git
 ```
 
 It is recommended to use two separate terminal instances so that the front-end and back-end can run concurrently.

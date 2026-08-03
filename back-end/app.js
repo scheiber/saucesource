@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
     </style>
     <h1 class="flame">🔥</h1>
     <h1>Welcome to the <a href="https://saucesource.scheiber.dev/">SauceSource</a> Backend!</h1>
-    <p style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif;"><a href="https://github.com/Scheiber/saucesource">Find out more.</a></p>`
+    <p style="text-align:center; font-family: 'Helvetica', 'Arial', sans-serif;"><a href="https://github.com/scheiber/saucesource">Find out more.</a></p>`
   );
 });
 
