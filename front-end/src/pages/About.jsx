@@ -1,5 +1,10 @@
 import "./About.css";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import { FaLeaf } from "react-icons/fa";
+import { TbJewishStar } from "react-icons/tb";
+
+const organicIcon = { color: "#00ff00", verticalAlign: "middle" };
+const kosherIcon = { color: "#87ceeb", verticalAlign: "middle" };
 
 const About = () => (
   <div className="about">
@@ -45,7 +50,9 @@ const About = () => (
         The higher the number of SHUs a sauce has, the more intense and "hot"
         the sauce will be.
       </p>
-      <h3 className="about-header">What is organic?</h3>
+      <h3 className="about-header">
+        What is <span role="img" aria-label="Organic"><FaLeaf style={organicIcon} /></span> organic?
+      </h3>
       <p>
         Certified organic foods are grown and processed according to federal
         guidelines addressing, among many factors, soil quality, pest and weed
@@ -60,7 +67,9 @@ const About = () => (
           Learn more about organic farming.
         </a>
       </p>
-      <h3 className="about-header">What is kosher?</h3>
+      <h3 className="about-header">
+        What is <span role="img" aria-label="Kosher"><TbJewishStar style={kosherIcon} /></span> kosher?
+      </h3>
       <p>
         The word "kosher" means fit or proper as it relates to Jewish dietary
         law. Kosher foods are permitted to be eaten by those who follow a kosher
@@ -77,15 +86,17 @@ const About = () => (
         src="./images/wordmark.png"
         alt="SauceSource Wordmark"
       />
-      <h3 className="about-header">Created by Jonathan Scheiber</h3>
+      <h3 className="about-header">Created by <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">Jonathan Scheiber</a></h3>
       <h4>"The Boss of the Sauce"</h4>
     </article>
     <article>
-      <img
-        className="headshot"
-        src="./images/jonathan.png"
-        alt="Headshot of Jonathan Scheiber"
-      />
+      <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">
+        <img
+          className="headshot"
+          src="./images/headshot.jpg"
+          alt="Headshot of Jonathan Scheiber"
+        />
+      </a>
     </article>
     <p className="bio-text">
       Jonathan is a full-stack web developer with a background in IT and
