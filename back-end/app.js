@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // Error
-app.get("*", (req, res) => {
+app.get("/*splat", (req, res) => {
   res.status(404).json({ error: "Error 404: Not Found" });
 });
 
