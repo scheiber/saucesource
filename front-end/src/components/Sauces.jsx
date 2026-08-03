@@ -4,10 +4,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sauces.css";
 import SauceCard from "./SauceCard";
-import { trackPromise } from "react-promise-tracker";
+import { trackPromise, usePromiseTracker } from "react-promise-tracker";
+import { RotatingLines } from "react-loader-spinner";
 import ScrollUpButton from "react-scroll-up-button";
 import { FaLeaf } from "react-icons/fa";
 import { TbJewishStar } from "react-icons/tb";
+
+const SAUCES_LOADING_AREA = "sauces-list";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -18,6 +21,7 @@ const Sauces = () => {
   const [filterOrganic, setFilterOrganic] = useState(false);
   const [filterKosher, setFilterKosher] = useState(false);
   const navigate = useNavigate();
+  const { promiseInProgress } = usePromiseTracker({ area: SAUCES_LOADING_AREA });
 
   useEffect(() => {
     trackPromise(
@@ -30,7 +34,8 @@ const Sauces = () => {
         .catch((error) => {
           console.warn(error);
           navigate("/error");
-        })
+        }),
+      SAUCES_LOADING_AREA
     );
   }, [navigate]);
 
@@ -121,15 +126,27 @@ const Sauces = () => {
           </button>
         )}
       </div>
-      <section className="sauce-grid">
-        {displayedSauces.length > 0 ? (
-          displayedSauces.map((sauce) => (
-            <SauceCard key={sauce.id} sauce={sauce} />
-          ))
-        ) : sauces.length > 0 ? (
-          <p className="no-results">No sauces match your search.</p>
-        ) : null}
-      </section>
+      {promiseInProgress ? (
+        <div className="sauces-loading">
+          <RotatingLines
+            strokeColor="rgb(255, 120, 0)"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="96"
+            visible={true}
+          />
+        </div>
+      ) : (
+        <section className="sauce-grid">
+          {displayedSauces.length > 0 ? (
+            displayedSauces.map((sauce) => (
+              <SauceCard key={sauce.id} sauce={sauce} />
+            ))
+          ) : sauces.length > 0 ? (
+            <p className="no-results">No sauces match your search.</p>
+          ) : null}
+        </section>
+      )}
       <ScrollUpButton style={{ backgroundColor: "rgb(255, 120, 0, 0.75)" }} />
     </div>
   );

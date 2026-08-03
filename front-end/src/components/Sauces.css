@@ -41,6 +41,12 @@ body.light .sauce-controls {
   padding: 0;
 }
 
+.sauces-loading {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
 .no-results {
   grid-column: 1 / -1;
   text-align: center;

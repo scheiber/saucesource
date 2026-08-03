@@ -12,5 +12,10 @@ export default defineConfig({
     setupFiles: "./src/setupTests.js",
     // Node's native localStorage global shadows jsdom's working one in tests; disable it.
     execArgv: ["--no-experimental-webstorage"],
+    server: {
+      deps: {
+        inline: ["react-loader-spinner", "styled-components"],
+      },
+    },
   },
 });
