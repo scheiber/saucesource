@@ -4,7 +4,7 @@
  * @return {string} A sequence of flame emoji characters
  */
 
-const scovilleFlames = (scoville) => {
+export const scovilleFlames = (scoville) => {
   return scoville > 20_000
     ? "🔥🔥🔥🔥🔥"
     : scoville > 10_000
@@ -15,5 +15,3 @@ const scovilleFlames = (scoville) => {
     ? "🔥🔥"
     : "🔥";
 };
-
-module.exports = { scovilleFlames };

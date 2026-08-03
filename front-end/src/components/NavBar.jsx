@@ -1,6 +1,7 @@
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import { BsSun, BsMoon } from "react-icons/bs";
+import navLogo from "../images/navlogo.png";
 
 const NavBar = ({ theme, toggleTheme }) => (
   <nav className="nav header">
@@ -9,7 +10,7 @@ const NavBar = ({ theme, toggleTheme }) => (
         <img
           className="nav-logo"
           alt="SauceSource logo"
-          src={require("../images/navlogo.png")}
+          src={navLogo}
         />
       </div>
     </NavLink>

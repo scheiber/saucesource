@@ -15,32 +15,18 @@
     "react-loader-spinner": "^5.4.5",
     "react-promise-tracker": "^2.1.1",
     "react-router-dom": "^6.30.4",
-    "react-scripts": "5.0.1",
-    "react-scroll-up-button": "^1.6.4",
-    "web-vitals": "^2.1.4"
+    "react-scroll-up-button": "^1.6.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.5",
+    "jsdom": "^30.0.1",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
   }
 }

@@ -1,4 +1,4 @@
-import SauceInfo from "../components/SauceInfo.js";
+import SauceInfo from "../components/SauceInfo";
 import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 

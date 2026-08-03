@@ -1,18 +1,18 @@
-import Sauces from "../components/Sauces.js";
+import NewSauce from "../components/NewSauce";
 import React from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
-const Index = () => {
+const New = () => {
   return (
     <div>
       <HelmetProvider>
         <Helmet>
-          <title>SauceSource | All Sauces</title>
+          <title>SauceSource | Add a Sauce</title>
         </Helmet>
       </HelmetProvider>
-      <Sauces />
+      <NewSauce />
     </div>
   );
 };
 
-export default Index;
+export default New;

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "./SauceCard.css";
 import { FaLeaf } from "react-icons/fa";
 import { TbJewishStar } from "react-icons/tb";
+import { scovilleFlames } from "../helpers/scovilleFlames.js";
 
 const formatter = new Intl.NumberFormat("en-US");
-const { scovilleFlames } = require("../helpers/scovilleFlames.js");
 
 const organicIcon = { color: "#00ff00", verticalAlign: "middle" };
 const kosherIcon = { color: "#87ceeb", verticalAlign: "middle" };

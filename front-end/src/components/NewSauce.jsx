@@ -1,13 +1,13 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { AiFillSave, AiOutlineLink } from "react-icons/ai";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { AiOutlineSend, AiOutlineLink } from "react-icons/ai";
 import { GiCancel } from "react-icons/gi";
 import { FaLeaf } from "react-icons/fa";
 import { TbJewishStar } from "react-icons/tb";
 import { BsImage } from "react-icons/bs";
 
-const API = process.env.REACT_APP_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const buttonIcon = { verticalAlign: "top" },
   organicIcon = { color: "#00ff00", verticalAlign: "middle" },
@@ -15,9 +15,8 @@ const buttonIcon = { verticalAlign: "top" },
   linkIcon = { color: "#BCBCBC", verticalAlign: "middle" },
   imageIcon = { color: "#e69138", verticalAlign: "middle" };
 
-const EditSauce = () => {
+const NewSauce = () => {
   const navigate = useNavigate();
-  let { index } = useParams();
   const [sauce, setSauce] = useState({
     id: "",
     name: "",
@@ -33,27 +32,16 @@ const EditSauce = () => {
     setSauce({ ...sauce, [event.target.id]: event.target.value });
   };
 
-  useEffect(() => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     axios
-      .get(`${API}/sauces/${index}`)
-      .then((res) => {
-        setSauce(res.data.payload);
+      .post(`${API}/sauces`, sauce)
+      .then(() => {
+        navigate("/sauces");
       })
       .catch((error) => {
         console.warn(error);
         navigate("/error");
-      });
-  }, [index, navigate]);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .put(`${API}/sauces/${index}`, sauce)
-      .then(() => {
-        navigate(`/sauces/${index}`);
-      })
-      .catch((error) => {
-        console.warn(error);
       });
   };
 
@@ -67,7 +55,7 @@ const EditSauce = () => {
 
   return (
     <div>
-      <h1>Edit Sauce</h1>
+      <h1>Add a Sauce</h1>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -81,6 +69,7 @@ const EditSauce = () => {
           required
         />
         <br />
+
         <label htmlFor="description">Description:</label>
         <br />
         <textarea
@@ -93,6 +82,7 @@ const EditSauce = () => {
           required
         />
         <br />
+
         <label htmlFor="scoville">🔥 Scoville Rating:</label>
         <input
           id="scoville"
@@ -103,6 +93,7 @@ const EditSauce = () => {
           required
         />
         <br />
+
         <input
           type="checkbox"
           name="is_organic"
@@ -115,10 +106,11 @@ const EditSauce = () => {
           <FaLeaf style={organicIcon} /> Organic
         </label>
         <br />
+
         <input
           type="checkbox"
-          name="is_kosher"
           className="checkmark"
+          name="is_kosher"
           checked={sauce.is_kosher}
           onChange={kosCheckBox}
           id="is_kosher"
@@ -127,6 +119,7 @@ const EditSauce = () => {
           <TbJewishStar style={kosherIcon} /> Kosher
         </label>
         <br />
+
         <label htmlFor="link">
           <AiOutlineLink style={linkIcon} /> Link:
         </label>
@@ -140,6 +133,7 @@ const EditSauce = () => {
           required
         />
         <br />
+
         <label htmlFor="image">
           <BsImage style={imageIcon} /> Image:
         </label>
@@ -148,7 +142,6 @@ const EditSauce = () => {
           type="url"
           size="40"
           pattern="https?://.+"
-          alt="sauce"
           value={sauce.image}
           onChange={newForm}
           required
@@ -172,17 +165,17 @@ const EditSauce = () => {
           />
         )}
         <br />
-        <Link to={`/sauces/${index}`}>
+        <Link to={`/sauces`}>
           <button className="cancel-button">
             <GiCancel style={buttonIcon} /> Cancel
           </button>
         </Link>
         <button className="submit-button" type="submit" value="Save">
-          <AiFillSave style={buttonIcon} /> Save
+          <AiOutlineSend style={buttonIcon} /> Submit
         </button>
       </form>
     </div>
   );
 };
 
-export default EditSauce;
+export default NewSauce;

@@ -84,7 +84,7 @@ cd saucesource/front-end
 Next, create a .env file to allow the front-end to access the back-end locally.
 
 ```bash
-echo "REACT_APP_API_URL=http://localhost:3333" >> .env
+echo "VITE_API_URL=http://localhost:3333" >> .env
 ```
 
 Next, install the required node modules.
@@ -96,7 +96,7 @@ npm i
 Finally, start the server.
 
 ```bash
-npm start
+npm run dev
 ```
 
 ### Back-end Setup

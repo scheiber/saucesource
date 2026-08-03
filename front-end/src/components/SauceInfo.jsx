@@ -13,11 +13,11 @@ import {
 } from "react-icons/ai";
 import { TbJewishStar } from "react-icons/tb";
 import { ImCross } from "react-icons/im";
+import { scovilleFlames } from "../helpers/scovilleFlames.js";
 
 const formatter = new Intl.NumberFormat("en-US");
-const { scovilleFlames } = require("../helpers/scovilleFlames.js");
 
-const API = process.env.REACT_APP_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const infoIcon = { verticalAlign: "top" },
   buttonIcon = { verticalAlign: "top" },

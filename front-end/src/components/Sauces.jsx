@@ -9,7 +9,7 @@ import ScrollUpButton from "react-scroll-up-button";
 import { FaLeaf } from "react-icons/fa";
 import { TbJewishStar } from "react-icons/tb";
 
-const API = process.env.REACT_APP_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const Sauces = () => {
   const [sauces, setSauces] = useState([]);
