@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import "./SauceInfo.css";
 import { trackPromise } from "react-promise-tracker";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 
 import { FaEdit, FaShoppingCart, FaLeaf } from "react-icons/fa";
 import {
@@ -64,6 +65,11 @@ const SauceInfo = () => {
 
   return (
     <section className="sauce-info-grid">
+      <HelmetProvider>
+        <Helmet>
+          <title>{`SauceSource | ${sauce.name || "Sauce Info"}`}</title>
+        </Helmet>
+      </HelmetProvider>
       <div>
         <img className="sauce-info-image" src={sauce.image} alt={sauce.name} />
       </div>
