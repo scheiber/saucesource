@@ -35,6 +35,7 @@ const SauceInfo = () => {
       axios
         .get(`${API}/sauces/${id}`)
         .then((res) => {
+          if (!res.data?.payload) throw new Error("Malformed response");
           setSauce(res.data.payload);
         })
         .catch((error) => {

@@ -24,10 +24,11 @@ const Sauces = () => {
       axios
         .get(`${API}/sauces`)
         .then((res) => {
+          if (!Array.isArray(res.data?.payload)) throw new Error("Malformed response");
           setSauces(res.data.payload);
         })
         .catch((error) => {
-          console.warn("error");
+          console.warn(error);
           navigate("/error");
         })
     );

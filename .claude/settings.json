@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm audit *)",
+      "Bash(npx react-scripts *)",
+      "Bash(git stash *)",
+      "Bash(npm ci *)",
+      "Bash(pg_isready)",
+      "Bash(timeout 5 node server.js)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npm uninstall *)",
+      "Bash(git rm *)",
+      "Bash(node -e ' *)",
+      "Bash(node --help)",
+      "Bash(NODE_OPTIONS=\"--no-experimental-webstorage\" npx vitest run src/tmp_localstorage_check.test.js)",
+      "Bash(npm ls *)",
+      "Bash(npx vitest *)",
+      "Bash(npm test *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/src/index.jsx)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(curl -sf http://localhost:5173)",
+      "Read(//private/tmp/claude-501/bundled-skills/2.1.220/**)",
+      "Read(//private/tmp/claude-501/bundled-skills/**)",
+      "Bash(npx playwright *)",
+      "Bash(npm init *)",
+      "Bash(node verify.mjs)"
+    ]
+  }
+}
