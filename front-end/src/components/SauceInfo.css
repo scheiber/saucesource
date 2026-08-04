@@ -1,9 +1,31 @@
+.sauce-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
 .sauce-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sauce-nav-arrow {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
 }
 
 .sauce-info-name {
@@ -42,11 +64,22 @@
 }
 
 @media (max-width: 767px) {
+  .sauce-info-wrapper {
+    gap: 0;
+    padding: 0 0.25rem;
+  }
+  .sauce-nav-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
   .sauce-info-image {
     height: 300px;
   }
   .sauce-info-grid {
     display: block;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .sauce-info-name {
     font-size: 35px;

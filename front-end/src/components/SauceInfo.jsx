@@ -11,6 +11,8 @@ import {
   AiTwotoneDelete,
   AiOutlineArrowLeft,
   AiOutlineInfoCircle,
+  AiOutlineLeft,
+  AiOutlineRight,
 } from "react-icons/ai";
 import { TbJewishStar } from "react-icons/tb";
 import { ImCross } from "react-icons/im";
@@ -28,6 +30,7 @@ const infoIcon = { verticalAlign: "top" },
 
 const SauceInfo = () => {
   const [sauce, setSauce] = useState([]);
+  const [allSauces, setAllSauces] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -45,6 +48,39 @@ const SauceInfo = () => {
         })
     );
   }, [id, navigate]);
+
+  // Fetched once so the prev/next arrows work without relying on how the
+  // user got to this page (direct link, refresh, "Surprise me", etc.).
+  useEffect(() => {
+    trackPromise(
+      axios
+        .get(`${API}/sauces`)
+        .then((res) => {
+          if (Array.isArray(res.data?.payload)) setAllSauces(res.data.payload);
+        })
+        .catch((error) => console.warn(error))
+    );
+  }, []);
+
+  const currentIndex = allSauces.findIndex((s) => String(s.id) === id);
+  const prevSauce = currentIndex > 0 ? allSauces[currentIndex - 1] : null;
+  const nextSauce =
+    currentIndex >= 0 && currentIndex < allSauces.length - 1
+      ? allSauces[currentIndex + 1]
+      : null;
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.metaKey || event.altKey || event.ctrlKey) return;
+      if (event.key === "ArrowLeft" && prevSauce) {
+        navigate(`/sauces/${prevSauce.id}`);
+      } else if (event.key === "ArrowRight" && nextSauce) {
+        navigate(`/sauces/${nextSauce.id}`);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [prevSauce, nextSauce, navigate]);
 
   const deleteSauce = () => {
     const answer = window.confirm(
@@ -64,82 +100,104 @@ const SauceInfo = () => {
   };
 
   return (
-    <section className="sauce-info-grid">
+    <div className="sauce-info-wrapper">
       <HelmetProvider>
         <Helmet>
           <title>{`SauceSource | ${sauce.name || "Sauce Info"}`}</title>
         </Helmet>
       </HelmetProvider>
-      <div>
-        <img className="sauce-info-image" src={sauce.image} alt={sauce.name} />
-      </div>
+      {prevSauce && (
+        <button
+          className="sauce-nav-arrow sauce-nav-prev"
+          onClick={() => navigate(`/sauces/${prevSauce.id}`)}
+          aria-label="Previous sauce"
+          title="Previous sauce"
+        >
+          <AiOutlineLeft />
+        </button>
+      )}
+      <section className="sauce-info-grid">
+        <div>
+          <img className="sauce-info-image" src={sauce.image} alt={sauce.name} />
+        </div>
 
-      <article>
-        <aside>
-          <h1 className="sauce-info-name">{sauce.name}</h1>
-          <div className="flames">{scovilleFlames(sauce.scoville)}</div>
-          <div>
-            <h4 className="sauce-info-scoville">
-              {formatter.format(sauce.scoville)} Scoville heat units (SHU){" "}
-              <a
-                title="What is a Scoville heat unit?"
-                className="scoville-info-icon"
-                href="/about"
-              >
-                <AiOutlineInfoCircle style={infoIcon} />
+        <article>
+          <aside>
+            <h1 className="sauce-info-name">{sauce.name}</h1>
+            <div className="flames">{scovilleFlames(sauce.scoville)}</div>
+            <div>
+              <h4 className="sauce-info-scoville">
+                {formatter.format(sauce.scoville)} Scoville heat units (SHU){" "}
+                <a
+                  title="What is a Scoville heat unit?"
+                  className="scoville-info-icon"
+                  href="/about"
+                >
+                  <AiOutlineInfoCircle style={infoIcon} />
+                </a>
+              </h4>
+            </div>
+            <div className="sauce-info-org-kos">
+              {sauce.is_organic ? (
+                <>
+                  {" "}
+                  <FaLeaf style={organicIcon} /> Organic
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <ImCross style={notIcon} /> Not Organic
+                </>
+              )}{" "}
+              &nbsp;&nbsp;
+              {sauce.is_kosher ? (
+                <>
+                  <TbJewishStar style={kosherIcon} /> Kosher
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <ImCross style={notIcon} /> Not Kosher
+                </>
+              )}
+            </div>
+            <div className="sauce-info-description">{sauce.description}</div>
+
+            <div>
+              <Link to="/sauces">
+                <button>
+                  <AiOutlineArrowLeft style={buttonIcon} /> Back
+                </button>
+              </Link>
+              <Link to={`/sauces/${id}/edit`}>
+                <button className="edit-button">
+                  <FaEdit style={buttonIcon} /> Edit
+                </button>
+              </Link>
+              <a target="_blank" rel="noopener noreferrer" href={sauce.link}>
+                <button className="buy-button">
+                  <FaShoppingCart style={buttonIcon} /> Buy
+                </button>
               </a>
-            </h4>
-          </div>
-          <div className="sauce-info-org-kos">
-            {sauce.is_organic ? (
-              <>
-                {" "}
-                <FaLeaf style={organicIcon} /> Organic
-              </>
-            ) : (
-              <>
-                {" "}
-                <ImCross style={notIcon} /> Not Organic
-              </>
-            )}{" "}
-            &nbsp;&nbsp;
-            {sauce.is_kosher ? (
-              <>
-                <TbJewishStar style={kosherIcon} /> Kosher
-              </>
-            ) : (
-              <>
-                {" "}
-                <ImCross style={notIcon} /> Not Kosher
-              </>
-            )}
-          </div>
-          <div className="sauce-info-description">{sauce.description}</div>
 
-          <div>
-            <Link to="/sauces">
-              <button>
-                <AiOutlineArrowLeft style={buttonIcon} /> Back
+              <button className="delete-button" onClick={deleteSauce}>
+                <AiTwotoneDelete style={buttonIcon} /> Delete
               </button>
-            </Link>
-            <Link to={`/sauces/${id}/edit`}>
-              <button className="edit-button">
-                <FaEdit style={buttonIcon} /> Edit
-              </button>
-            </Link>
-            <a target="_blank" rel="noopener noreferrer" href={sauce.link}>
-              <button className="buy-button">
-                <FaShoppingCart style={buttonIcon} /> Buy
-              </button>
-            </a>
-
-            <button className="delete-button" onClick={deleteSauce}>
-              <AiTwotoneDelete style={buttonIcon} /> Delete
-            </button>
-          </div>
-        </aside>
-      </article>
-    </section>
+            </div>
+          </aside>
+        </article>
+      </section>
+      {nextSauce && (
+        <button
+          className="sauce-nav-arrow sauce-nav-next"
+          onClick={() => navigate(`/sauces/${nextSauce.id}`)}
+          aria-label="Next sauce"
+          title="Next sauce"
+        >
+          <AiOutlineRight />
+        </button>
+      )}
+    </div>
   );
 };
 
