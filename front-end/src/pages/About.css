@@ -1,15 +1,13 @@
 .about-kicker,
 .about-header,
-.about-text,
-.bio-text {
-  margin-left: 15%;
-  margin-right: 15%;
+.about-text {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.headshot {
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
+.about-kicker {
+  text-align: center;
 }
 
 .about-text,
@@ -17,18 +15,62 @@
   line-height: 1.4;
 }
 
+.creator-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 3rem auto 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: rgba(128, 128, 128, 0.08);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.creator-card .about-header,
+.creator-card .bio-text {
+  max-width: none;
+  margin: 0;
+}
+
+.creator-card h4 {
+  margin: 0.25rem 0 0.75rem;
+  opacity: 0.85;
+}
+
+.creator-card .wordmark {
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.headshot {
+  border-radius: 100%;
+  height: 160px;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.github-note {
+  text-align: center;
+}
+
+.icon {
+  padding: 10px;
+  transition: filter 1s;
+}
+
 @media (max-width: 767px) {
-  .wordmark {
-    height: 60px;
-  }
-  .headshot {
-    height: 150px;
-    width: 150px;
-  }
   .about-kicker,
   .about-header,
-  .about-text,
-  .bio-text {
+  .about-text {
+    max-width: none;
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -36,11 +78,20 @@
     font-size: 35px;
   }
   .about-header {
-    font-size: 28px;
+    font-size: 25px;
   }
-}
-
-.icon {
-  padding: 10px;
-  transition: filter 1s;
+  .creator-card {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1.5rem;
+  }
+  .creator-card .wordmark {
+    height: 50px;
+  }
+  .headshot {
+    height: 130px;
+    width: 130px;
+  }
 }

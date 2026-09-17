@@ -80,16 +80,7 @@ const About = () => (
         </a>
       </p>
     </div>
-    <article>
-      <img
-        className="wordmark"
-        src="./images/wordmark.png"
-        alt="SauceSource Wordmark"
-      />
-      <h3 className="about-header">Created by <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">Jonathan Scheiber</a></h3>
-      <h4>"The Boss of the Sauce"</h4>
-    </article>
-    <article>
+    <article className="creator-card">
       <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">
         <img
           className="headshot"
@@ -97,46 +88,57 @@ const About = () => (
           alt="Headshot of Jonathan Scheiber"
         />
       </a>
+      <div className="creator-info">
+        <img
+          className="wordmark"
+          src="./images/wordmark.png"
+          alt="SauceSource Wordmark"
+        />
+        <h3 className="about-header">Created by <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">Jonathan Scheiber</a></h3>
+        <h4>"The Boss of the Sauce"</h4>
+        <p className="bio-text">
+          Jonathan is a full-stack web developer with a background in IT and
+          customer service from New York, NY.
+          <br /> His interests include user experience (UX) design, cybersecurity,
+          and accessibility.
+        </p>
+        <div className="social-icons">
+          <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">
+            <img
+              className="icon"
+              alt="Website"
+              title="Website"
+              src="./icons/website.png"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Scheiber"
+          >
+            <img
+              className="icon"
+              alt="GitHub"
+              title="GitHub"
+              src="./icons/github.png"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/jonscheiber/"
+          >
+            <img
+              className="icon"
+              alt="LinkedIn"
+              title="LinkedIn"
+              src="./icons/linkedin.png"
+            />
+          </a>
+        </div>
+      </div>
     </article>
-    <p className="bio-text">
-      Jonathan is a full-stack web developer with a background in IT and
-      customer service from New York, NY.
-      <br /> His interests include user experience (UX) design, cybersecurity,
-      and accessibility.
-    </p>
-    <a target="_blank" rel="noopener noreferrer" href="https://scheiber.dev/">
-      <img
-        className="icon"
-        alt="Website"
-        title="Website"
-        src="./icons/website.png"
-      />
-    </a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://github.com/Scheiber"
-    >
-      <img
-        className="icon"
-        alt="GitHub"
-        title="GitHub"
-        src="./icons/github.png"
-      />
-    </a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://www.linkedin.com/in/jonscheiber/"
-    >
-      <img
-        className="icon"
-        alt="LinkedIn"
-        title="LinkedIn"
-        src="./icons/linkedin.png"
-      />
-    </a>
-    <p className="about-text">
+    <p className="about-text github-note">
       <a
         target="_blank"
         rel="noopener noreferrer"
