@@ -69,6 +69,12 @@ body.light .sauce-controls {
   text-decoration: none;
 }
 
+@media screen and (min-width: 1800px) {
+  .sauce-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 @media screen and (min-width: 1100px) and (max-width: 1439px) {
   .sauce-grid {
     grid-template-columns: repeat(3, 1fr);
