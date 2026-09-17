@@ -16,7 +16,10 @@
 }
 
 .sauce-nav-arrow {
-  flex-shrink: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -26,6 +29,14 @@
   font-size: 22px;
   padding: 0;
   margin: 0;
+}
+
+.sauce-nav-prev {
+  left: 1rem;
+}
+
+.sauce-nav-next {
+  right: 1rem;
 }
 
 .sauce-info-name {
@@ -72,6 +83,12 @@
     width: 36px;
     height: 36px;
     font-size: 16px;
+  }
+  .sauce-nav-prev {
+    left: 0.25rem;
+  }
+  .sauce-nav-next {
+    right: 0.25rem;
   }
   .sauce-info-image {
     height: 300px;
