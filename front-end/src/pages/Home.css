@@ -16,7 +16,6 @@
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
   max-width: 1400px;
   margin: 2em auto;
@@ -49,12 +48,6 @@
   margin-bottom: 2em;
 }
 
-@media (max-width: 1099px) {
-  .featured-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 767px) {
   .splash-header {
     font-size: 30px;
@@ -71,7 +64,6 @@
   }
 
   .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
     padding: 0 0.5em;
   }
 

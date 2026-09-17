@@ -8,9 +8,17 @@ import { RotatingLines } from "react-loader-spinner";
 import SauceCard from "../components/SauceCard";
 
 const API = import.meta.env.VITE_API_URL;
-const FEATURED_COUNT = 5;
 const ROTATE_INTERVAL_MS = 5000;
 const FEATURED_LOADING_AREA = "featured-sauces";
+
+// Number of cards shown is also the column count, so the featured
+// section always fills exactly one row at any window width.
+const getFeaturedColumns = (width) => {
+  if (width >= 1440) return 5;
+  if (width >= 1100) return 4;
+  if (width >= 768) return 3;
+  return 2;
+};
 
 const pickRandom = (sauces, count) =>
   [...sauces].sort(() => Math.random() - 0.5).slice(0, count);
@@ -18,6 +26,9 @@ const pickRandom = (sauces, count) =>
 const Home = () => {
   const [sauces, setSauces] = useState([]);
   const [featured, setFeatured] = useState([]);
+  const [columns, setColumns] = useState(() =>
+    getFeaturedColumns(window.innerWidth)
+  );
   const navigate = useNavigate();
   const { promiseInProgress } = usePromiseTracker({
     area: FEATURED_LOADING_AREA,
@@ -41,13 +52,22 @@ const Home = () => {
   }, [navigate]);
 
   useEffect(() => {
+    const handleResize = () => {
+      const next = getFeaturedColumns(window.innerWidth);
+      setColumns((current) => (current === next ? current : next));
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
     if (sauces.length === 0) return;
     const rotate = () =>
-      setFeatured(pickRandom(sauces, Math.min(FEATURED_COUNT, sauces.length)));
+      setFeatured(pickRandom(sauces, Math.min(columns, sauces.length)));
     rotate();
     const interval = setInterval(rotate, ROTATE_INTERVAL_MS);
     return () => clearInterval(interval);
-  }, [sauces]);
+  }, [sauces, columns]);
 
   return (
     <div className="tagline">
@@ -79,6 +99,9 @@ const Home = () => {
         <section
           key={featured.map((sauce) => sauce.id).join("-")}
           className="featured-grid"
+          style={{
+            gridTemplateColumns: `repeat(${featured.length || columns}, 1fr)`,
+          }}
           aria-label="Featured sauces"
         >
           {featured.map((sauce) => (
